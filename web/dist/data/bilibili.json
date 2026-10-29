@@ -1,0 +1,1547 @@
+{
+  "updatedAt": "2026-10-29T12:26:11.753Z",
+  "mode": "index",
+  "errors": [
+    "Search 线性代数 教程: B站暂不可用（HTTP 412）",
+    "Search 物理 科普: B站暂不可用（HTTP 412）",
+    "Search 历史 公开课: B站暂不可用（HTTP 412）",
+    "Search 计算机 网络: B站暂不可用（HTTP 412）"
+  ],
+  "items": [
+    {
+      "id": "BV1bx411M7Zx",
+      "bvid": "BV1bx411M7Zx",
+      "title": "【官方双语】深度学习之神经网络的结构 Part 1 ver 2.0",
+      "desc": "更多信息请看下方评论\n\n翻译：FPS罗兹  校对：ZSC  时间轴：白日梦 后期：sum$ver\nBut what *is* a Neural Network? | Deep learning, Part 1\nhttps://youtu.be/aircAruvnKk\n\nVer. 2.0 添加了屏幕文本以及一些注释，并修正了原片14:46处偏置矩阵的下标错误。",
+      "cover": "https://i2.hdslb.com/bfs/archive/3fddf427ddef5a78105deb60180727a7ad47c4d8.jpg",
+      "author": "3Blue1Brown",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "人工智能 神经网络 机器学习 深度学习",
+      "duration": 1153,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1bx411M7Zx/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "",
+          "duration": 1153
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:00.840Z"
+    },
+    {
+      "id": "BV1ys411472E",
+      "bvid": "BV1ys411472E",
+      "title": "【官方双语/合集】线性代数的本质 - 系列合集",
+      "desc": "通过直观的动画演示，理解线性代数的大部分核心概念\n翻译：@Solara570  @rjdimo\n资助页面：www.patreon.com/3blue1brown\nEssence of linear algebra  http://bit.ly/2kDa5o0",
+      "cover": "https://i2.hdslb.com/bfs/archive/c81a8eb032f3eaa1afd604272a410ac6896f281e.jpg",
+      "author": "3Blue1Brown",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "数学 向量 线性代数 矩阵",
+      "duration": 10363,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1ys411472E/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "00 - 序言",
+          "duration": 309
+        },
+        {
+          "page": 2,
+          "part": "01 - 向量究竟是什么？",
+          "duration": 592
+        },
+        {
+          "page": 3,
+          "part": "02 - 线性组合、张成的空间与基",
+          "duration": 599
+        },
+        {
+          "page": 4,
+          "part": "03 - 矩阵与线性变换",
+          "duration": 658
+        },
+        {
+          "page": 5,
+          "part": "04 - 矩阵乘法与线性变换复合",
+          "duration": 603
+        },
+        {
+          "page": 6,
+          "part": "附注1 - 三维空间中的线性变换",
+          "duration": 285
+        },
+        {
+          "page": 7,
+          "part": "05 - 行列式",
+          "duration": 603
+        },
+        {
+          "page": 8,
+          "part": "06 - 逆矩阵、列空间与零空间",
+          "duration": 729
+        },
+        {
+          "page": 9,
+          "part": "附注2 - 非方阵",
+          "duration": 266
+        },
+        {
+          "page": 10,
+          "part": "07 - 点积与对偶性",
+          "duration": 851
+        },
+        {
+          "page": 11,
+          "part": "08第一部分 - 叉积的标准介绍",
+          "duration": 533
+        },
+        {
+          "page": 12,
+          "part": "08第二部分 - 以线性变换的眼光看叉积",
+          "duration": 790
+        },
+        {
+          "page": 13,
+          "part": "09 - 基变换",
+          "duration": 771
+        },
+        {
+          "page": 14,
+          "part": "10 - 特征向量与特征值",
+          "duration": 1035
+        },
+        {
+          "page": 15,
+          "part": "11 - 抽象向量空间",
+          "duration": 1006
+        },
+        {
+          "page": 16,
+          "part": "12 - 克莱姆法则，几何解释",
+          "duration": 733
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:01.624Z"
+    },
+    {
+      "id": "BV1EW411u7th",
+      "bvid": "BV1EW411u7th",
+      "title": "【计算机科学速成课】[40集全/精校] - Crash Course Computer Science",
+      "desc": "1. Youtube 原视频：https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulI\n\n2. 感谢翻译！（排名不分先后）\n* 不想膨胀的小R\n* 糖醋陈皮\n* ZireHao\n* gilot\n* 晴空\n* Crazycat\n* Cindy\n* 出门去\n* TMC - RN\n* LCAR979\n\n3. https://github.com/1c7/crash-course-computer-science-chinese",
+      "cover": "https://i2.hdslb.com/bfs/archive/3d37686d1cb53309504f5f35955257a44b4e28fb.jpg",
+      "author": "CrashCourse字幕组",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "计算机 编程 算法 科学",
+      "duration": 28321,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1EW411u7th/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "1. 计算机早期历史-Early Computing",
+          "duration": 713
+        },
+        {
+          "page": 2,
+          "part": "2. 电子计算机-Electronic Computing",
+          "duration": 644
+        },
+        {
+          "page": 3,
+          "part": "3. 布尔逻辑 和 逻辑门-Boolean Logic & Logic Gates",
+          "duration": 607
+        },
+        {
+          "page": 4,
+          "part": "4. 二进制-Representing Numbers and Letters with Binary_BiliBili",
+          "duration": 645
+        },
+        {
+          "page": 5,
+          "part": "5. 算术逻辑单元-How Computers Calculate-the ALU",
+          "duration": 669
+        },
+        {
+          "page": 6,
+          "part": "6. 寄存器 & 内存-Registers and RAM_BiliBili",
+          "duration": 737
+        },
+        {
+          "page": 7,
+          "part": "7. 中央处理器(CPU)-The Central Processing Unit",
+          "duration": 698
+        },
+        {
+          "page": 8,
+          "part": "8. 指令和程序-Instructions & Programs",
+          "duration": 636
+        },
+        {
+          "page": 9,
+          "part": "9. 高级CPU设计-Advanced CPU Designs_BiliBili",
+          "duration": 743
+        },
+        {
+          "page": 10,
+          "part": "10. 早期的编程方式-Early Programming",
+          "duration": 566
+        },
+        {
+          "page": 11,
+          "part": "11. 编程语言发展史-The First Programming Languages",
+          "duration": 712
+        },
+        {
+          "page": 12,
+          "part": "12. 编程原理-语句和函数-Programming Basics - Statements & Functions",
+          "duration": 717
+        },
+        {
+          "page": 13,
+          "part": "13. 算法入门 - Intro to Algorithms",
+          "duration": 704
+        },
+        {
+          "page": 14,
+          "part": "14. 数据结构-Data Structures",
+          "duration": 606
+        },
+        {
+          "page": 15,
+          "part": "15. 阿兰·图灵-Alan Turing_BiliBili",
+          "duration": 785
+        },
+        {
+          "page": 16,
+          "part": "16. 软件工程-Software Engineering",
+          "duration": 635
+        },
+        {
+          "page": 17,
+          "part": "17. 集成电路&摩尔定律-Integrated Circuits & Moore's Law",
+          "duration": 830
+        },
+        {
+          "page": 18,
+          "part": "18. 操作系统-Operating Systems",
+          "duration": 815
+        },
+        {
+          "page": 19,
+          "part": "19. 内存&储存介质-Memory & Storage",
+          "duration": 737
+        },
+        {
+          "page": 20,
+          "part": "20. 文件系统-Files & File Systems_BiliBili",
+          "duration": 723
+        },
+        {
+          "page": 21,
+          "part": "21. 压缩-Compression",
+          "duration": 767
+        },
+        {
+          "page": 22,
+          "part": "22. 命令行界面-Keyboards & Command Line Interfaces",
+          "duration": 683
+        },
+        {
+          "page": 23,
+          "part": "23. 屏幕&2D 图形显示-Screens&2D Graphics",
+          "duration": 691
+        },
+        {
+          "page": 24,
+          "part": "24. 冷战和消费主义-The Cold War and Consumerism_BiliBili",
+          "duration": 679
+        },
+        {
+          "page": 25,
+          "part": "25. 个人计算机革命-The Personal Computer Revolution_BiliBili",
+          "duration": 615
+        },
+        {
+          "page": 26,
+          "part": "26. 图形用户界面-Graphical User Interfaces",
+          "duration": 779
+        },
+        {
+          "page": 27,
+          "part": "27. 3D 图形-3D Graphics",
+          "duration": 761
+        },
+        {
+          "page": 28,
+          "part": "28. 计算机网络-Computer Networks",
+          "duration": 740
+        },
+        {
+          "page": 29,
+          "part": "29. 互联网-The Internet_BiliBili",
+          "duration": 719
+        },
+        {
+          "page": 30,
+          "part": "30. 万维网-The World Wide Web",
+          "duration": 696
+        },
+        {
+          "page": 31,
+          "part": "31. 计算机安全-Cybersecurity_BiliBili",
+          "duration": 750
+        },
+        {
+          "page": 32,
+          "part": "32. 黑客&攻击-Hackers & Cyber Attacks",
+          "duration": 712
+        },
+        {
+          "page": 33,
+          "part": "33. 加密-Cryptography",
+          "duration": 753
+        },
+        {
+          "page": 34,
+          "part": "34. 机器学习&人工智能-Machine Learning & Artificial Intelligence_BiliBili",
+          "duration": 711
+        },
+        {
+          "page": 35,
+          "part": "35. 计算机视觉-Computer Vision",
+          "duration": 669
+        },
+        {
+          "page": 36,
+          "part": "36. 自然语言处理-Natural Language Processing",
+          "duration": 709
+        },
+        {
+          "page": 37,
+          "part": "37. 机器人-Robots",
+          "duration": 746
+        },
+        {
+          "page": 38,
+          "part": "38. 计算机心理学 - Psychology of Computing",
+          "duration": 758
+        },
+        {
+          "page": 39,
+          "part": "39. 教育科技-Educational Technology_BiliBili",
+          "duration": 712
+        },
+        {
+          "page": 40,
+          "part": "40. 奇点,天网,计算机的未来-The Singularity, Skynet, and the Future of Computing",
+          "duration": 749
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:02.457Z"
+    },
+    {
+      "id": "BV1qW411N7FU",
+      "bvid": "BV1qW411N7FU",
+      "title": "【官方双语/合集】微积分的本质 - 系列合集",
+      "desc": "《微积分的本质》合集。\n更多信息请见各分集简介和评论置顶",
+      "cover": "https://i0.hdslb.com/bfs/archive/8bd673f27eb8b8b9a348dc2809e296d8d37bd30b.jpg",
+      "author": "3Blue1Brown",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "数学 微积分 导数 积分",
+      "duration": 10829,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1qW411N7FU/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "01",
+          "duration": 1025
+        },
+        {
+          "page": 2,
+          "part": "02 - 导数的悖论",
+          "duration": 1118
+        },
+        {
+          "page": 3,
+          "part": "03 - 用几何来求导",
+          "duration": 1123
+        },
+        {
+          "page": 4,
+          "part": "04 - 直观理解链式法则和乘积法则",
+          "duration": 1012
+        },
+        {
+          "page": 5,
+          "part": "05 - 指数函数求导",
+          "duration": 830
+        },
+        {
+          "page": 6,
+          "part": "06 - 隐函数求导是怎么回事？",
+          "duration": 933
+        },
+        {
+          "page": 7,
+          "part": "07 - 极限",
+          "duration": 1106
+        },
+        {
+          "page": 8,
+          "part": "08 - 积分与微积分基本定理",
+          "duration": 1246
+        },
+        {
+          "page": 9,
+          "part": "09 - 面积和斜率有什么联系？",
+          "duration": 759
+        },
+        {
+          "page": 10,
+          "part": "09脚注 - 高阶导数",
+          "duration": 338
+        },
+        {
+          "page": 11,
+          "part": "10 - 泰勒级数",
+          "duration": 1339
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:03.255Z"
+    },
+    {
+      "id": "BV1c4411d7jb",
+      "bvid": "BV1c4411d7jb",
+      "title": "计算机网络微课堂（有字幕无背景音乐版）",
+      "desc": "计算机网络微课堂（有字幕无背景音乐版）\n为了满足不同网友对字幕以及背景音乐的需求，特意制作了无字幕无背景音乐版、无字幕有背景音乐版、有字幕无背景音乐版和有字幕有背景音乐版，大家可以根据自己的喜好选择观看。\n用简单的语言描述复杂的问题，用形象生动的动画演示抽象的概念，用精美的文案给人视觉上的享受。让初学者更容易入门计算机网络。 希望在计算机网络的学习、复习和考研中能够助你一臂之力。\n参考教材：谢希仁 计算机网络（第7版）",
+      "cover": "https://i1.hdslb.com/bfs/archive/7f327f33e929cc5a4d4892384f7755b93bf7a741.jpg",
+      "author": "湖科大教书匠",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "计算机 网络 教程 协议",
+      "duration": 56812,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1c4411d7jb/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "1.1 计算机网络在信息时代的作用",
+          "duration": 234
+        },
+        {
+          "page": 2,
+          "part": "1.2 因特网概述",
+          "duration": 787
+        },
+        {
+          "page": 3,
+          "part": "1.3 三种交换方式：电路交换、分组交换和报文交换",
+          "duration": 1031
+        },
+        {
+          "page": 4,
+          "part": "1.4 计算机网络的定义和分类",
+          "duration": 573
+        },
+        {
+          "page": 5,
+          "part": "1.5 计算机网络的性能指标（1）",
+          "duration": 1066
+        },
+        {
+          "page": 6,
+          "part": "1.5 计算机网络的性能指标（2）",
+          "duration": 465
+        },
+        {
+          "page": 7,
+          "part": "1.6 计算机网络体系结构（1）—常见的计算机网络体系结构",
+          "duration": 522
+        },
+        {
+          "page": 8,
+          "part": "1.6 计算机网络体系结构（2）—分层的必要性",
+          "duration": 701
+        },
+        {
+          "page": 9,
+          "part": "1.6 计算机网络体系结构（3）—分层思想举例",
+          "duration": 417
+        },
+        {
+          "page": 10,
+          "part": "1.6 计算机网络体系结构（4）—专用术语",
+          "duration": 647
+        },
+        {
+          "page": 11,
+          "part": "1.7 第1章 概述 章节小结",
+          "duration": 713
+        },
+        {
+          "page": 12,
+          "part": "1.8 第1章 概述 习题课（1）— 体系结构相关习题",
+          "duration": 1057
+        },
+        {
+          "page": 13,
+          "part": "1.8 第1章 概述 习题课（2）— 时延相关习题",
+          "duration": 1525
+        },
+        {
+          "page": 14,
+          "part": "2.1 物理层的基本概念",
+          "duration": 198
+        },
+        {
+          "page": 15,
+          "part": "2.2 物理层下面的传输媒体",
+          "duration": 1008
+        },
+        {
+          "page": 16,
+          "part": "2.3 传输方式",
+          "duration": 316
+        },
+        {
+          "page": 17,
+          "part": "2.4 编码与调制",
+          "duration": 809
+        },
+        {
+          "page": 18,
+          "part": "2.5 信道的极限容量",
+          "duration": 756
+        },
+        {
+          "page": 19,
+          "part": "2.6 第2章 物理层 章节小结",
+          "duration": 900
+        },
+        {
+          "page": 20,
+          "part": "2.7 第2章 物理层 习题课",
+          "duration": 806
+        },
+        {
+          "page": 21,
+          "part": "3.1 数据链路层概述",
+          "duration": 580
+        },
+        {
+          "page": 22,
+          "part": "3.2 封装成帧",
+          "duration": 591
+        },
+        {
+          "page": 23,
+          "part": "3.3 差错检测",
+          "duration": 710
+        },
+        {
+          "page": 24,
+          "part": "3.4.1 可靠传输的基本概念",
+          "duration": 341
+        },
+        {
+          "page": 25,
+          "part": "3.4.2 可靠传输的实现机制 — 停止-等待协议",
+          "duration": 979
+        },
+        {
+          "page": 26,
+          "part": "3.4.3 可靠传输的实现机制 — 回退N帧协议",
+          "duration": 976
+        },
+        {
+          "page": 27,
+          "part": "3.4.4 可靠传输的实现机制 — 选择重传协议",
+          "duration": 817
+        },
+        {
+          "page": 28,
+          "part": "3.5 点对点协议PPP",
+          "duration": 702
+        },
+        {
+          "page": 29,
+          "part": "3.6.1 媒体接入控制的基本概念",
+          "duration": 262
+        },
+        {
+          "page": 30,
+          "part": "3.6.2 媒体接入控制 — 静态划分信道",
+          "duration": 1057
+        },
+        {
+          "page": 31,
+          "part": "3.6.3 随机接入 — CSMA/CD协议",
+          "duration": 1261
+        },
+        {
+          "page": 32,
+          "part": "3.6.4 随机接入— CSMA/CA协议",
+          "duration": 1356
+        },
+        {
+          "page": 33,
+          "part": "3.7 MAC地址、IP地址以及ARP协议（1） — MAC地址",
+          "duration": 1069
+        },
+        {
+          "page": 34,
+          "part": "3.7 MAC地址、IP地址以及ARP协议（2） — IP地址",
+          "duration": 775
+        },
+        {
+          "page": 35,
+          "part": "3.7 MAC地址、IP地址以及ARP协议（3） — ARP协议",
+          "duration": 449
+        },
+        {
+          "page": 36,
+          "part": "3.8 集线器与交换机的区别",
+          "duration": 845
+        },
+        {
+          "page": 37,
+          "part": "3.9 以太网交换机自学习和转发帧的流程",
+          "duration": 814
+        },
+        {
+          "page": 38,
+          "part": "3.10 以太网交换机的生成树协议STP",
+          "duration": 494
+        },
+        {
+          "page": 39,
+          "part": "3.11.1 虚拟局域网VLAN概述",
+          "duration": 322
+        },
+        {
+          "page": 40,
+          "part": "3.11.2 虚拟局域网VLAN的实现机制",
+          "duration": 1156
+        },
+        {
+          "page": 41,
+          "part": "4.1 网络层概述",
+          "duration": 456
+        },
+        {
+          "page": 42,
+          "part": "4.2 网络层提供的两种服务",
+          "duration": 286
+        },
+        {
+          "page": 43,
+          "part": "4.3.1 IPv4地址概述",
+          "duration": 492
+        },
+        {
+          "page": 44,
+          "part": "4.3.2 分类编址的IPv4地址",
+          "duration": 1001
+        },
+        {
+          "page": 45,
+          "part": "4.3.3 划分子网的IPv4地址",
+          "duration": 890
+        },
+        {
+          "page": 46,
+          "part": "4.3.4 无分类编址的IPv4地址",
+          "duration": 711
+        },
+        {
+          "page": 47,
+          "part": "4.3.5 IPv4地址的应用规划",
+          "duration": 838
+        },
+        {
+          "page": 48,
+          "part": "4.4 IP数据报的发送和转发过程",
+          "duration": 791
+        },
+        {
+          "page": 49,
+          "part": "4.5 静态路由配置及其可能产生的路由环路问题",
+          "duration": 895
+        },
+        {
+          "page": 50,
+          "part": "4.6.1 路由选择协议概述",
+          "duration": 632
+        },
+        {
+          "page": 51,
+          "part": "4.6.2 路由信息协议RIP的基本工作原理",
+          "duration": 983
+        },
+        {
+          "page": 52,
+          "part": "4.6.3 开放最短路径优先OSPF的基本工作原理",
+          "duration": 982
+        },
+        {
+          "page": 53,
+          "part": "4.6.4 边界网关协议BGP的基本工作原理",
+          "duration": 563
+        },
+        {
+          "page": 54,
+          "part": "4.7 IPv4数据报的首部格式",
+          "duration": 1487
+        },
+        {
+          "page": 55,
+          "part": "4.8 网际控制报文协议ICMP",
+          "duration": 782
+        },
+        {
+          "page": 56,
+          "part": "4.9 虚拟专用网VPN与网络地址转换NAT",
+          "duration": 790
+        },
+        {
+          "page": 57,
+          "part": "5.1 运输层概述",
+          "duration": 242
+        },
+        {
+          "page": 58,
+          "part": "5.2 运输层端口号、复用与分用的概念",
+          "duration": 780
+        },
+        {
+          "page": 59,
+          "part": "5.3 UDP和TCP的对比",
+          "duration": 625
+        },
+        {
+          "page": 60,
+          "part": "5.4 TCP的流量控制",
+          "duration": 835
+        },
+        {
+          "page": 61,
+          "part": "5.5 TCP的拥塞控制",
+          "duration": 1299
+        },
+        {
+          "page": 62,
+          "part": "5.6 TCP超时重传时间的选择",
+          "duration": 720
+        },
+        {
+          "page": 63,
+          "part": "5.7 TCP可靠传输的实现",
+          "duration": 1084
+        },
+        {
+          "page": 64,
+          "part": "5.8.1 TCP的运输连接管理—TCP的连接建立",
+          "duration": 775
+        },
+        {
+          "page": 65,
+          "part": "5.8.2 TCP的运输连接管理—TCP的连接释放",
+          "duration": 593
+        },
+        {
+          "page": 66,
+          "part": "5.9 TCP报文段的首部格式",
+          "duration": 939
+        },
+        {
+          "page": 67,
+          "part": "6.1 应用层概述",
+          "duration": 208
+        },
+        {
+          "page": 68,
+          "part": "6.2 客户—服务器方式和对等方式",
+          "duration": 375
+        },
+        {
+          "page": 69,
+          "part": "6.3 动态主机配置协议DHCP",
+          "duration": 917
+        },
+        {
+          "page": 70,
+          "part": "6.4 域名系统DNS",
+          "duration": 1217
+        },
+        {
+          "page": 71,
+          "part": "6.5 文件传送协议FTP",
+          "duration": 585
+        },
+        {
+          "page": 72,
+          "part": "6.6 电子邮件",
+          "duration": 1321
+        },
+        {
+          "page": 73,
+          "part": "6.7 万维网WWW",
+          "duration": 1631
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:04.042Z"
+    },
+    {
+      "id": "BV1ns41167b9",
+      "bvid": "BV1ns41167b9",
+      "title": "【熟肉】线性代数的本质 - 03 - 矩阵与线性变换",
+      "desc": "视频源地址：https://www.youtube.com/watch?v=kYB8IZa5AuE 线性代数的本质（Essense of Linear Algebra）系列\n作者：@3Blue1Brown\n\n听译、时间轴、压制：@Solara570\n校对：@rjdimo\n\n03 - 线性变换的简介，以及线性变换与矩阵之间的对应关系",
+      "cover": "https://i2.hdslb.com/bfs/archive/0219069564b932809621ec68000216edb129024b.jpg",
+      "author": "3Blue1Brown",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "线性代数 矩阵 线性变换",
+      "duration": 658,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1ns41167b9/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "",
+          "duration": 658
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:04.853Z"
+    },
+    {
+      "id": "BV1NJ411k7bi",
+      "bvid": "BV1NJ411k7bi",
+      "title": "【数学】线性代数的本质 中文语音 3Blue1Brown",
+      "desc": "原文：https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/videos\r\nB站官方视频：av6731067\r\n喜欢的话记得点赞投币关注三连喲；",
+      "cover": "https://i0.hdslb.com/bfs/archive/dcf46bddf50a5c42d5e04a2369bad63d5622d901.png",
+      "author": "莉莉丝官方账号",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "数学 线性代数 中文",
+      "duration": 10349,
+      "category": "",
+      "curated": true,
+      "url": "https://www.bilibili.com/video/BV1NJ411k7bi/",
+      "pages": [
+        {
+          "page": 1,
+          "part": "序言",
+          "duration": 309
+        },
+        {
+          "page": 2,
+          "part": "向量究竟是什么？第1章",
+          "duration": 595
+        },
+        {
+          "page": 3,
+          "part": "線性組合、生成空間與基底向量 | 第二章",
+          "duration": 599
+        },
+        {
+          "page": 4,
+          "part": "線性變換與矩陣 | 第三章",
+          "duration": 659
+        },
+        {
+          "page": 5,
+          "part": "矩阵乘法作为组合变换的形式以理解 | 第4章",
+          "duration": 607
+        },
+        {
+          "page": 6,
+          "part": "三維線性變換 | （五）",
+          "duration": 285
+        },
+        {
+          "page": 7,
+          "part": "行列式 | （六）",
+          "duration": 605
+        },
+        {
+          "page": 8,
+          "part": "反矩陣、行空間與零空間 7",
+          "duration": 737
+        },
+        {
+          "page": 9,
+          "part": "非方陣的矩陣，在不同維度間的轉換 | 8",
+          "duration": 268
+        },
+        {
+          "page": 10,
+          "part": "点积和两重性|9",
+          "duration": 841
+        },
+        {
+          "page": 11,
+          "part": "叉积 | 10",
+          "duration": 542
+        },
+        {
+          "page": 12,
+          "part": "基於線性變換的叉积 | 11",
+          "duration": 785
+        },
+        {
+          "page": 13,
+          "part": "克莱默法则，用几何方法解释 | 12",
+          "duration": 733
+        },
+        {
+          "page": 14,
+          "part": "坐标变换l13",
+          "duration": 764
+        },
+        {
+          "page": 15,
+          "part": "特征向量和特征值| 线性代数的本质，第14章",
+          "duration": 1014
+        },
+        {
+          "page": 16,
+          "part": "抽象矢量空间| 线性代数的本质，第15章",
+          "duration": 1006
+        }
+      ],
+      "fetchedAt": "2026-10-29T12:26:05.643Z"
+    },
+    {
+      "id": "BV1atCRYsE7x",
+      "bvid": "BV1atCRYsE7x",
+      "title": "90分钟！清华博士带你一口气搞懂人工智能和神经网络",
+      "desc": "视频使用素材来自：\n3blue1brown\nArtem Kirsanov\n使用manim引擎制作\n\n推荐书籍：\n1. 《Deep Learning》 by Ian Goodfellow, Yoshua Bengio, and Aaron Courville\n2. 《Pattern Recognition and Machine Learning》 by Christopher M. Bishop\n3. 《Artificial Intelligence: A Modern Approach》 by Stua",
+      "cover": "https://i0.hdslb.com/bfs/archive/3fe4d87db7573fc74c8a39bd3a75f6660c1194ea.jpg",
+      "author": "漫士沉思录",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "人工智能,机器学习,数学,神经网络,2024诺贝尔奖",
+      "duration": 5338,
+      "category": "科学科普",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1atCRYsE7x/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1Hr4y1q7Y1",
+      "bvid": "BV1Hr4y1q7Y1",
+      "title": "什么是神经网络？看一个动画，就全明白了",
+      "desc": "关注微信公众号：动画讲编程  \n官网：www.dhcode.cn  \n课程咨询，添加微信：dhcode  \nqq学习交流群：1040744438",
+      "cover": "https://i2.hdslb.com/bfs/archive/98edca17e40d354cf49a536d7ad68e8f5a687565.jpg",
+      "author": "动画讲编程",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "AI算法,数据分析,神经网络,深度学习,机器学习,数据挖掘,人工智能,算法,python,程序员",
+      "duration": 472,
+      "category": "野生技能协会",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1Hr4y1q7Y1/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV13GsZ61Ejh",
+      "bvid": "BV13GsZ61Ejh",
+      "title": "计算机发展史｜来了，人工智能（图灵、香农、神经网络）",
+      "desc": "【计算机发展史｜科技简史】\n梳理计算机从早期计算装置、初代电子计算机，到个人电脑、互联网时代的发展历程。\n讲解重要人物、标志性机型、关键技术突破，理清科技演变脉络。\n适合：中小学生科普、信息课拓展、科技爱好者",
+      "cover": "https://i0.hdslb.com/bfs/archive/6144cbf3fe02e5689d0ed52a0438c3f8e8044258.jpg",
+      "author": "吃我一扫帚",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "计算机发展史,神经网络,计算机科普,科技简史,信息科技,计算机基础,人工智能,计算机",
+      "duration": 3450,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV13GsZ61Ejh/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1MWGbzCEyp",
+      "bvid": "BV1MWGbzCEyp",
+      "title": "5分钟理解什么是神经网络！",
+      "desc": "AI是怎么识别照片里的猫狗，或者写出一篇文章的？一切的秘密都藏在神经网络里。\n \n大家好，欢迎来到“给孩子的AI公开课”第16课：神经网络——AI的大脑。\n在这节课中，我们会一起学习人工神经网络\n了解它的原理、历史和应用，加深我们对大模型的理解。",
+      "cover": "https://i2.hdslb.com/bfs/archive/112d057c44d13ce643487f12cbde333c897796db.jpg",
+      "author": "HAI生活实验室",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "生活记录,原创,科普,AI,记录",
+      "duration": 306,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1MWGbzCEyp/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1mu411x7VD",
+      "bvid": "BV1mu411x7VD",
+      "title": "五分钟秒懂神经网络原理，机器学习入门教程",
+      "desc": "两坤分懂原理，四坤分懂名词",
+      "cover": "https://i2.hdslb.com/bfs/archive/b13e24caeb9ea774143f742f88624a6f72e89a3b.jpg",
+      "author": "鼠鼠啥都会一点",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "入门教程,人工智能,入门,机器学习,神经网络,深度学习,算法,学习,必剪创作,教程",
+      "duration": 582,
+      "category": "科学科普",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1mu411x7VD/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1n6Y36nEwX",
+      "bvid": "BV1n6Y36nEwX",
+      "title": "什么是神经网络？",
+      "desc": "10分钟带你了解神经网络，希望能够帮助大家",
+      "cover": "https://i1.hdslb.com/bfs/archive/4fb3467219c26ab57880b514a8a870981cb65e61.jpg",
+      "author": "小偏导",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "深度学习,神经网络,机器学习,人工智能,科普",
+      "duration": 625,
+      "category": "职业职场",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1n6Y36nEwX/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1dL3w6FEno",
+      "bvid": "BV1dL3w6FEno",
+      "title": "从一个猜水果的游戏，一步步搞懂神经网络",
+      "desc": "LLM系列图文教程：https://www.xuanyuancode.com/ai-llm\n视频中的动画使用https://svganimate.ai 制作",
+      "cover": "https://i2.hdslb.com/bfs/archive/81c80d013ed9bd70d7a40a9fc11f20bda54dd158.jpg",
+      "author": "轩辕的编程宇宙",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "神经网络,人工智能,编程,AI学习,深度学习,计算机科学,学习教程",
+      "duration": 637,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1dL3w6FEno/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1Xb4y1x7jF",
+      "bvid": "BV1Xb4y1x7jF",
+      "title": "秒懂，神经网络（NN）",
+      "desc": "【1】科普神经网络基本原理；\n【2】推导反向传播算法（神经网络求梯度）；\n【3】数字识别案例（matlab）；\n------\n视频中算法动画采用matlab制作，指纹/数字识别/卷积的代码/神经网络结构绘制软件在微信公众号“图通道”，如有需要可关注后回复“全家桶”下载。",
+      "cover": "https://i0.hdslb.com/bfs/archive/e05db2e0013e0e26ec8ec444b460ce724354f45d.jpg",
+      "author": "图通道",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "神经网络,大学,知识分享官,数学,科普,matlab,卷积,机器学习,python,可视化",
+      "duration": 673,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1Xb4y1x7jF/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1mESUBMEAQ",
+      "bvid": "BV1mESUBMEAQ",
+      "title": "大白话讲解：神经网络",
+      "desc": "大白话讲解：神经网络",
+      "cover": "https://i1.hdslb.com/bfs/archive/b20baa015d3d50bd6c0f4033ced260e6b40d76b1.jpg",
+      "author": "机器学习的故事",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "神经网络,神经网络模型,机器学习算法,算法工程师,算法面试,算法学习,人工智能算法,数学建模,人工智能,科学",
+      "duration": 144,
+      "category": "日常",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1mESUBMEAQ/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1TGnB63ErG",
+      "bvid": "BV1TGnB63ErG",
+      "title": "网络架构就这？数据包视角，带你轻松搞懂计算机网络架构和原理",
+      "desc": "本视频从一个数据包的视角，带你彻底搞懂计算机网络的架构和原理。【架构图】模板链接：https://sourl.cn/6TfWmx",
+      "cover": "https://i1.hdslb.com/bfs/archive/dadc36a58eddad91032603048303498cc7a2a13b.jpg",
+      "author": "架构师阿Q",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "IT,万兴图示,学习,网络,计算机,科普,架构,路由器,通信,大学生",
+      "duration": 993,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1TGnB63ErG/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1MhxL6tEZA",
+      "bvid": "BV1MhxL6tEZA",
+      "title": "【中配】从零开始构建神经网络 - Green Code cAkMcPfY_Ns",
+      "desc": "https://www.youtube.com/watch?v=cAkMcPfY_Ns\n原视频：I Built a Neural Network from Scratch\n原作者：Green Code\n发布日期：2024-06-10\n视频链接：https://www.youtube.com/watch?v=cAkMcPfY_Ns\n\n✨ 想看英文原声？请关注 @英文白斑马\n\n00:00 神经元与网络结构\n项目目标是在不依赖机器学习库或现成框架的情况下，仅使用 Python、NumPy 和数学知识从零构建神经",
+      "cover": "https://i1.hdslb.com/bfs/archive/f56b3f3370dd1678dc75ecf227e4b2bdc79b7724.png",
+      "author": "黑纹白斑马",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "神经网络,cAkMcPfY_Ns,黑纹白斑马,Green Code,编程教程,人工智能,YouDub,NumPy,Python,计算机技术,深度学习,机器学习",
+      "duration": 508,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1MhxL6tEZA/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1aV411z7FS",
+      "bvid": "BV1aV411z7FS",
+      "title": "【五分钟机器学习】神经网络：一个小人国投票的故事",
+      "desc": "【五分钟机器学习】第十三弹：神经网络--一个小人国投票的故事 \n如果你觉得视频内容有所帮助，欢迎素质三连。 \n您的支持将是我继续做视频的最大动力。\n如果你对视频中的数学推导感兴趣的话，欢迎关注这个专栏链接：\n「五分钟机器学习」 神经网络的基本介绍：https://www.bilibili.com/read/cv6962864",
+      "cover": "https://i1.hdslb.com/bfs/archive/909f9a5829fac8e6c813a1c60906e68b935323a2.jpg",
+      "author": "五分钟机器学习",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "AI,知识分享官,机器学习,科学,科普,神经网络,人工智能",
+      "duration": 442,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1aV411z7FS/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV12b4y1X7Wv",
+      "bvid": "BV12b4y1X7Wv",
+      "title": "【数之道 05】走进神经网络模型、机器学习的世界",
+      "desc": "从本集开始，我们会围绕神经网络机器学习推出多期节目包括\n1. 神经网络模型基础入门\n2. 激活函数的选择\n3. 从零开始搭建ANN模型\n4. 了解更多包括CNN, RNN等模型\n5. 更多的案例介绍和分享等",
+      "cover": "https://i0.hdslb.com/bfs/archive/9bf4ea5a876391fe79f267469dbba53fe5f6298d.jpg",
+      "author": "FunInCode",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "数学,人工智能,编程,机器学习",
+      "duration": 498,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV12b4y1X7Wv/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV147sd6iEZ3",
+      "bvid": "BV147sd6iEZ3",
+      "title": "研究生必看！CNN/RNN/GAN/GNN/Transformer 一次讲清｜别死磕公式学深度学习-人工智能/研究生/神经网络",
+      "desc": "正确学习顺序：先搞懂网络解决什么问题、优缺点、适用数据，建立全局框架认知，再动手跑代码，最后再啃公式！\n\n关注我的【微·信·服·务·号：迪哥谈AI  回复：977】 +助理即可获取！\n✅人工智能系统课程+具身智能课程+大模型课程+程序员转行学AI\n✅AI交叉论文/项目/就业辅导+kagglel保牌+大厂1v1就业指导 \n✅机器学习/深度学习/NLP系统课程",
+      "cover": "https://i2.hdslb.com/bfs/archive/48327b43506647cd2ac05ec11de85a0a503665f4.jpg",
+      "author": "迪哥的AI世界",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "科技猎手,transformer,神经网络,人工智能,CNN,RNN,深度学习,机器学习,GAN,GNN",
+      "duration": 57463,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV147sd6iEZ3/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1Yg4y1K7LP",
+      "bvid": "BV1Yg4y1K7LP",
+      "title": "秒懂，生成对抗网络（GAN可视化）",
+      "desc": "【1】科普生成对抗网络Generative adversarial network，GAN的基本原理；\n【2】解释生成模型与判别模型的区别；\n【3】一维、二维GAN可视化案例（matlab）;\n视频中算法动画（一维可视化与数字生成模型）采用matlab制作，如有需要可关注微信公众号“图通道”回复“全家桶”下载。",
+      "cover": "https://i1.hdslb.com/bfs/archive/d951c515d2ae07a36a7076fad0000365d9dd1cff.jpg",
+      "author": "图通道",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "生成,Generative,人工智能,数学,GAN,可视化,神经网络,科学很可爱,2023科学很可爱,生成对抗网络,matlab",
+      "duration": 280,
+      "category": "科学科普",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1Yg4y1K7LP/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1x44y1P7s2",
+      "bvid": "BV1x44y1P7s2",
+      "title": "图解，卷积神经网络（CNN可视化）",
+      "desc": "【1】卷积神经网络是一类包含\"卷积计算\"且具有深度结构的神经网络，被广泛用于图像识别领域，是深度学习的代表算法之一；\n【2】动画演示卷积神经网络经历卷积层、池化层和非线性激励层的全过程；\n【3】用比较直观的方式解释卷积神经网络的工作原理；这主要是一个面向大众和初学者的科普可视化视频，如果你在从事专业工作，还请以文献/教材为准；\n--------\n【下载】文中出现的动画/模型/GUI为UP主利用MATLAB编写；如有需要，关注公众号“图通道”回复“全家桶”获取下载方式；\n【相关】\nCNN可视化GUI：BV1",
+      "cover": "https://i1.hdslb.com/bfs/archive/c4ff6fa17007999528543c2e0b71b9d12cf260a3.jpg",
+      "author": "图通道",
+      "source": "B站",
+      "format": "视频",
+      "topic": "科学与数学",
+      "tags": "深度学习,经验分享,matlab,数学,学习帮帮团,科普,神经网络,cnn,数学建模,卷积神经网络",
+      "duration": 351,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1x44y1P7s2/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV1SJ411i7Aq",
+      "bvid": "BV1SJ411i7Aq",
+      "title": "一分钟告诉你什么是神经网络",
+      "desc": "转自开眼\n神经网络是一种应用类似于大脑神经突触联接的结构进行信息处理的数学模型，在近些年被广泛提及。一分钟显然无法详细解释该名词，但可以让你了解它是什么东西。",
+      "cover": "https://i2.hdslb.com/bfs/archive/6407575d239783870b9dcfff5a5f330f5153512e.jpg",
+      "author": "青大附中初中部",
+      "source": "B站",
+      "format": "视频",
+      "topic": "AI 与科技",
+      "tags": "神经网络,黑科技,机器学习,趣味科普人文,科学",
+      "duration": 64,
+      "category": "计算机技术",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1SJ411i7Aq/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:06.728Z"
+    },
+    {
+      "id": "BV13k4y1x7VZ",
+      "bvid": "BV13k4y1x7VZ",
+      "title": "这个视频，带你真正入门哲学（重制版）【中西哲学1001夜 先导篇00】",
+      "desc": "哲学，是所有学科乃至一切事情的元思考部分。【哲学当然是可以定义的；哲学的定义当然也是没有定论的。本篇笔记对哲学定义的论述，只是一种入门视角，或者说实用视角的定义】\n\n本期视频参考资料：\n\n爱丁堡大学课程《哲学导论》\n耶鲁大学课程《心理学导论》\n王德峰《王阳明心学及其现代意义》\n王德峰《中西思想必修课》\n傅佩荣《哲学与人生》\n柏拉图《泰阿泰德篇》\n乔斯坦·贾德《苏菲的世界》\n伯特兰·罗素《哲学问题》\nMatthew Chrisman, et al. Philosophy for Everyone\nMetap",
+      "cover": "https://i0.hdslb.com/bfs/archive/43b4c63f29fbe87af1e9ce19ee2351a73268e91b.jpg",
+      "author": "非卿漫谈",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "读书,哲学,苏格拉底,老子,笔记,尼采,柏拉图,王阳明,亚里士多德,入门",
+      "duration": 1624,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV13k4y1x7VZ/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1y64y1r7Mt",
+      "bvid": "BV1y64y1r7Mt",
+      "title": "【中国人民大学】西方哲学史（字幕|全64讲）张志伟〈附德国哲学选读〉",
+      "desc": "课程来源：http://mooc1.chaoxing.com/course/80094711.html\n此稿系中华外国哲学史学会常务理事、副秘书长，中国人民大学人文学院副院长，哲学系宗教学系副主任、博士生导师张志伟教授的《西方哲学智慧》及《德国哲学选读》",
+      "cover": "https://i2.hdslb.com/bfs/archive/31629c460c86d807ea8b3fe11b8c2683b4a70a62.jpg",
+      "author": "西西相",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "康德,哲学,黑格尔,学习,中国人民大学,历史,人文,苏格拉底,笛卡尔,课程",
+      "duration": 181557,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1y64y1r7Mt/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1cr4y1w7ah",
+      "bvid": "BV1cr4y1w7ah",
+      "title": "盘点双十一值得买的哲学入门书：入门哲学看这些书就够了",
+      "desc": "盘点哲学入门书，希望对大家有帮助~o(*￣▽￣*)ブ\n视频中提到的其他视频：\n ▪ 每日哲学 #200｜哲学入门应该读什么书？－BV1h4411v75o\n ▪ 读书｜康德：纯粹理性批判－BV1mp4y1S7m2\n此外，如果各位小伙伴对包含哲学要素（而不是讲哲学）的小说感兴趣的话，欢迎阅读up主的《常夜灯》系列小说，在专栏可以找到~",
+      "cover": "https://i2.hdslb.com/bfs/archive/65ccc159a99a96609fa00186813ca41aac4c4b6e.jpg",
+      "author": "Arinor",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "十月打卡挑战W4,书单,知识分享官,哲学,哲学入门,读书分享,读书",
+      "duration": 594,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1cr4y1w7ah/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1scUrByEd9",
+      "bvid": "BV1scUrByEd9",
+      "title": "有声书 系统全面学习哲学之初级第一阶段哲学导论阶段《做哲学 88个思想实验中的哲学导论》01，更新中。",
+      "desc": "系统全面学习的第一阶段分别有哲学史、哲学导论、哲学方法论和逻辑学四大基石，本视频是第一阶段的哲学导论阶段。",
+      "cover": "https://i0.hdslb.com/bfs/archive/19c04a4d6e4b4142fca607d37d500442d92be269.jpg",
+      "author": "一粒唯",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "小西奥多·希克,初级,西方哲学,中文字幕,哲学,哲学入门,学习,教育,有声书,哲学导论",
+      "duration": 36602,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1scUrByEd9/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1Yko4YEEr6",
+      "bvid": "BV1Yko4YEEr6",
+      "title": "【知识精讲】彻底学会高中政治必修四《哲学与文化》——【哲学】",
+      "desc": "二倍速，听两遍",
+      "cover": "https://i0.hdslb.com/bfs/archive/b89288c5fde3fce819d8a0ad5534631e751fbb76.jpg",
+      "author": "王小东老师_高中政治",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "高考百日冲刺计划,文化主观题,哲学主观题,哲学与文化,寓于,主要矛盾与矛盾主要方面,bilibili开学季,高中政治,经济基础与上层建筑,高考政治,矛盾",
+      "duration": 22663,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1Yko4YEEr6/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1UUWqeMEi3",
+      "bvid": "BV1UUWqeMEi3",
+      "title": "【哲学教程】30分钟让你零基础入门哲学，获得自学哲学的方式",
+      "desc": "",
+      "cover": "https://i2.hdslb.com/bfs/archive/1f79bee19c5852d007246d597535394777fc47de.jpg",
+      "author": "索路者灰质",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "人文,认知,哲学,西方哲学,知识",
+      "duration": 1798,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1UUWqeMEi3/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1avHb6tEBC",
+      "bvid": "BV1avHb6tEBC",
+      "title": "哲学入门：读什么书？怎么读？",
+      "desc": "视频剪辑：yuki每天都在找下饭视频\n视频封面：v子",
+      "cover": "https://i1.hdslb.com/bfs/archive/c8dfbbba9f70fecf483f3bc3b0b4c0e2a1ed6e76.jpg",
+      "author": "潜在狗子",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "德勒兹,解构主义,哲学入门,齐泽克,福柯,哲学",
+      "duration": 380,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1avHb6tEBC/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV16f4y1F7QQ",
+      "bvid": "BV16f4y1F7QQ",
+      "title": "【硬核干货合集】百万收藏！不自律、自卑、迷茫...看这个合集就够了！",
+      "desc": "集合了年轻人最关注的难题，从克服自卑、消除内耗，到如何戒掉手机，爱上学习，应有尽有，曾帮助了一些朋友，今天整理出来给大家，方便按需查找，喜欢的话不妨三连起来，防止下次要看找不到啦！",
+      "cover": "https://i0.hdslb.com/bfs/archive/8a0fd4c64cd9269c44f268d9bfccaeab66f296b8.jpg",
+      "author": "进击的铁木君",
+      "source": "B站",
+      "format": "视频",
+      "topic": "社会与世界",
+      "tags": "女生,记忆力,人文,男生,知识分享官,心理学,思维,社会,自信,大学",
+      "duration": 3597,
+      "category": "社科·法律·心理",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV16f4y1F7QQ/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1Z8411i7t5",
+      "bvid": "BV1Z8411i7t5",
+      "title": "【26公考适用】马克思主义哲学 简单易懂不枯燥",
+      "desc": "【公考系列课】马克思主义哲学课。\n听得下去不枯燥，简单易懂的马哲课。\n后续会继续更新其他的公考系列课。",
+      "cover": "https://i2.hdslb.com/bfs/archive/984d5a5276c684121d4cedb212e9313e245d55d8.jpg",
+      "author": "公考杰出青年",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "公共基础知识,马哲,考公,考编,马克思主义哲学,国考,事业编,公考,马克思主义基本原理,公务员考试",
+      "duration": 43800,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1Z8411i7t5/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1ZL411J7Gz",
+      "bvid": "BV1ZL411J7Gz",
+      "title": "入门哲学【不要】读哪些书，两种入门哲学的方法，关于哲学入门的哲学【狗子字幕组】",
+      "desc": "参考文献：彼得辛格《黑格尔入门》\n                 千葉雅也『勉強の哲学』\n视频剪辑：茕孑零\n封面：v子",
+      "cover": "https://i0.hdslb.com/bfs/archive/fd127ef06e3638465a5c2081aeac7246cca67c05.jpg",
+      "author": "潜在狗子",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "读书推荐,柄谷行人,哲学,读书,黑格尔,康德,碧蓝之海,哲学入门",
+      "duration": 335,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1ZL411J7Gz/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1f4411Q727",
+      "bvid": "BV1f4411Q727",
+      "title": "【哲学入门】 陈宣良 哲学十讲",
+      "desc": "https://www.youtube.com/channel/UCJbRgJcm0lobU8vy-KYOaDw/videos",
+      "cover": "https://i0.hdslb.com/bfs/archive/d7a485ac59335c48a2f8262ee2597f8f4aaad83e.jpg",
+      "author": "天下英雄出我辈",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "公开课,哲学,陈宣良,科学,教育,文化",
+      "duration": 17597,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1f4411Q727/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1DH6bBwEe7",
+      "bvid": "BV1DH6bBwEe7",
+      "title": "【46集全】10分钟哲学课 哲学入门课程 双语字幕",
+      "desc": "",
+      "cover": "https://i0.hdslb.com/bfs/archive/8c358370ea74759823464cd6e506b2b090a450d9.jpg",
+      "author": "高能君充电站",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "英语口语,英语听力,双语字幕,学习,教育,哲学,字幕,英语学习,双语",
+      "duration": 26577,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1DH6bBwEe7/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1X26qYqEX5",
+      "bvid": "BV1X26qYqEX5",
+      "title": "［哲学入门］推荐读《近代哲学史》的都是什么家伙？哲学入门到底咋入门？不会选哲学史？别再问我哲学入门路径了！",
+      "desc": "第一个视频的重制版。",
+      "cover": "https://i1.hdslb.com/bfs/archive/778c6846e0fbbf460f0322aebab4879775f281e4.jpg",
+      "author": "MasterSpark子非鱼",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "哲学,B站辩论季,哲学入门,谢林,哲学史,教材,我们是 / 不是正身处哲学的黄昏,学习,黑格尔,读书,启蒙",
+      "duration": 1579,
+      "category": "社科·法律·心理",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1X26qYqEX5/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1ML41187rR",
+      "bvid": "BV1ML41187rR",
+      "title": "思维-托马斯·内格尔[你的第一本哲学书]节选-全16集,【编辑推荐】★畅销全球的哲学入门书。在全球被译成近30种语言出版，数十所名校推荐阅读。在美国，教授会将这",
+      "desc": "你的第一本哲学书_[美] 托马斯·内格尔 / 宝树 / 中信出版社 / 2021_豆瓣评分:7.8_(4620人评价)_【编辑推荐】★畅销全球的哲学入门书。在全球被译成近30种语言出版，数十所名校推荐阅读。在美国，教授会将这本书连同罗素的《西方哲学史》推荐给每位希望了解哲学的读..._https://www.douban.com/link2/?url=https%3A%2F%2Fbook.douban.com%2Fsubject%2F26892991%2F&query=%E3%80%8A%E4%BD%A0",
+      "cover": "https://i1.hdslb.com/bfs/archive/bc1ef5df9080423c86b233a1dd39aa3a76c8795c.jpg",
+      "author": "听书时间",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "文学,历史,朗读,阅读,读书,名著,听书,你的第一本哲学书,精选,知识",
+      "duration": 8797,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1ML41187rR/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV13KNn6tEyL",
+      "bvid": "BV13KNn6tEyL",
+      "title": "耗时6年，一口气搞懂哲学与文化所有重难点！高中最难的内容！",
+      "desc": "",
+      "cover": "https://i0.hdslb.com/bfs/archive/ffba8b89357c02981596730be2dcdf7eb3cd1176.jpg",
+      "author": "FredTao高考政治",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "高考,上海政治等级考,哲学,哲学与文化,政治等级考,重难点,高考政治,经验分享,一口气,高中",
+      "duration": 2360,
+      "category": "校园学习",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV13KNn6tEyL/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV1Qz421d74t",
+      "bvid": "BV1Qz421d74t",
+      "title": "马克思漫漫说第二季01集——哲学与世界观方法论（一）",
+      "desc": "贝尔特等人踏上马克思主义哲学学习的征程，迎来的第一个难题是“什么是哲学”。为解决这一难题，陆先生决定将他们引导到1992年刚刚开始建设的浦东。这个新兴的地区，正是一个充满变革和差异的代表性场所。\n \n在浦东，他们面对同一片土地，却发现农民、工人和商人对于这块土地有着截然不同的理解。农民将土地视为生命之源，与自然相融合，将生存的依托放置在大地之上。工人则通过劳动与生产相连接，将社会结构和阶级关系融入他们的世界观。而商人则以市场为核心，将交易和竞争作为构建他们观念的主要元素。\n \n这样的差异不仅反映了各个阶层",
+      "cover": "https://i1.hdslb.com/bfs/archive/f69be48c5c40227986f1267f62b9b1491db35139.jpg",
+      "author": "马老师漫漫说",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "马克思漫漫说,考研,正能量,唯物辩证法,马克思,哲学",
+      "duration": 257,
+      "category": "人文历史",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV1Qz421d74t/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    },
+    {
+      "id": "BV18Jxu6rENt",
+      "bvid": "BV18Jxu6rENt",
+      "title": "【中英双语+资料】人生学校西方哲学｜想不通人生时读谁？柏拉图到萨特 原片合计6300万+｜Western Philosophy 2014–2022",
+      "desc": "人生学校（The School of Life）西方哲学系列｜从柏拉图、亚里士多德讲到尼采、萨特、维特根斯坦，原片合计6300万+播放。\n\n📌 本期看点\n· 古典与中世纪：洞穴寓言、理念论、亚里士多德的幸福、斯多葛的平静、奥古斯丁与阿奎那\n· 近代哲学：蒙田、帕斯卡尔、笛卡尔、斯宾诺莎、休谟、康德，理性和情感各自能走多远\n· 现代与当代：叔本华、黑格尔、尼采的超人与热爱命运、海德格尔、萨特的自欺、福柯、德里达\n· 每讲十分钟左右，把一位哲学家的核心想法讲成能用在生活里的道理\n\n🧭 观看指南\n共 31 讲，",
+      "cover": "https://i1.hdslb.com/bfs/archive/eb26c09780c4c57d02667ee15a89c6a1266dfcc4.jpg",
+      "author": "名校课程-顶级中配",
+      "source": "B站",
+      "format": "视频",
+      "topic": "人文与艺术",
+      "tags": "职场人,人生学校,TheSchoolOfLife,萨特,哲学入门,哲学史,西方哲学,尼采,人生意义,大学生",
+      "duration": 21592,
+      "category": "数码",
+      "curated": false,
+      "url": "https://www.bilibili.com/video/BV18Jxu6rENt/",
+      "pages": [],
+      "fetchedAt": "2026-10-29T12:26:10.267Z"
+    }
+  ]
+}

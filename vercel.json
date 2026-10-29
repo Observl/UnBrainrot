@@ -1,0 +1,1 @@
+{"outputDirectory":"web/dist","functions":{"api/*.mjs":{"maxDuration":15}},"rewrites":[{"source":"/api/search","destination":"/api/search.mjs"}]}
