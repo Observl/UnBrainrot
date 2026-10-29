@@ -4,4 +4,4 @@
 
 [打开网页](https://observl.github.io/UnBrainrot/) · [功能与部署说明](web/README.md)
 
-GitHub Pages 提供真实内容索引搜索；实时搜索需要 Node 或 Vercel 后端。运行 `cd web` 后执行 `npm start`；测试 `npm test`。
+GitHub Pages 已连接 Cloudflare Workers 实时搜索后端，搜索受限时回退到真实内容索引。运行 `cd web` 后执行 `npm start`；测试 `npm test`。

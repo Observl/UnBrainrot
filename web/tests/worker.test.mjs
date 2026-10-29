@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import worker from '../../worker.mjs';
+test('GitHub Pages is permitted to read health responses without credentials',async()=>{const response=await worker.fetch(new Request('https://worker.example/api/health',{headers:{Origin:'https://observl.github.io'}}),{});assert.equal(response.status,200);assert.equal(response.headers.get('Access-Control-Allow-Origin'),'https://observl.github.io');assert.equal(response.headers.get('Access-Control-Allow-Credentials'),null);assert.equal((await response.json()).ok,true)});
+test('unrelated sites cannot consume search through browser CORS',async()=>{const response=await worker.fetch(new Request('https://worker.example/api/search?q=test',{headers:{Origin:'https://untrusted.example'}}),{});assert.equal(response.status,403);assert.equal(response.headers.get('Access-Control-Allow-Origin'),null)});
+test('invalid query and write requests never reach upstream',async()=>{const missing=await worker.fetch(new Request('https://worker.example/api/search'),{});assert.equal(missing.status,400);const write=await worker.fetch(new Request('https://worker.example/api/search?q=test',{method:'POST'}),{});assert.equal(write.status,405)});
+test('static routes are delegated to the asset binding',async()=>{const response=await worker.fetch(new Request('https://worker.example/'),{ASSETS:{fetch:async()=>new Response('page')}});assert.equal(await response.text(),'page')});

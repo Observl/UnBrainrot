@@ -2,3 +2,6 @@ node_modules/
 *.zip
 .env
 .env.*
+.cache/
+.wrangler/
+preview-*.png

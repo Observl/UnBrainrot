@@ -8,7 +8,8 @@
 
 ## 两种部署
 
-- GitHub Pages：部署 `web/dist`。**只有索引搜索，不提供实时 B站全站搜索**。Actions 每次部署刷新公开元数据，风控失败保留已有索引。未设置定时刷新。搜索覆盖的范围会显示在页面上。
+- GitHub Pages：部署 `web/dist`。前端托管在此，通过 `dist/config.js` 连接 Cloudflare Worker 实时搜索后端。Actions 每次部署刷新公开元数据，风控失败保留已有索引。未设置定时刷新。搜索覆盖的范围会显示在页面上。
+- Cloudflare Workers：根目录执行 `npx wrangler deploy --config wrangler.jsonc`；发布 Worker API 和静态网页。已部署地址：https://unbrainrot-knowledge.griffonage2077.workers.dev 。GitHub 前端允许跨域调用，其他来源拒绝。
 - Vercel：导入此仓库，使用根目录 `vercel.json`。静态输出目录为 `web/dist`，`api/search.mjs` 提供搜索后端。Node.js 22，无需密钥。页面允许切换「目录 / 实时」；实际部署需由有 Vercel 访问权限的账号完成。
 - 本地 Node 服务同样提供 `/api/search?q=关键词&page=1`。仅在提交搜索时请求上游，缓存 5 分钟，上游风控或超时返回明确错误，前端切回索引。
 
@@ -26,4 +27,4 @@
 
 ## 当前验证边界
 
-已验证公开元数据、原封面地址、服务端搜索、筛选规则和页面交互。B站搜索有间歇性 412 风控，不能承诺持续可用。GitHub Pages 没有服务端运行时，不将静态目录包装为实时搜索。
+已验证公开元数据、原封面地址、服务端搜索、筛选规则和页面交互。B站搜索有间歇性 412 风控，不能承诺持续可用。GitHub Pages 没有服务端运行时，实时搜索由独立 Cloudflare Worker 提供。
