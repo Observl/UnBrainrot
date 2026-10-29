@@ -32,3 +32,7 @@ GitHub Pages 前端调用现有 Cloudflare `/api/search`；Worker 的 `SEARCH_OR
 `card-window.js` 用 IntersectionObserver 卸载距视口较远的卡片正文和图片，保留原有网格跨度占位，向上回滚时恢复。追加分页仅建立新增卡片；布局测量只遍历已挂载卡片。键盘焦点所在的卡片不会卸载。
 
 停止每次分页向 localStorage 序列化整批搜索结果；只在收藏、足迹等用户操作时持久化相关记录。限制内存元数据缓存；历史条目只在当前会话结果中保留，必要记录按原有浏览器存储策略保存。
+
+## 页面AI配置与刷新去重
+
+当前机制见 [说明](../contracts/PERSONALIZATION.md)：主题轮换、近期已看去重、页面内存API配置和不缓存的POST转发。

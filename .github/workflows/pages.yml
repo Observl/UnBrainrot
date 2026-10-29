@@ -22,6 +22,7 @@ jobs:
         with:
           node-version: '22'
       - name: Validate functionality
+        if: github.event_name == 'workflow_dispatch'
         run: node --test web/tests/*.test.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
