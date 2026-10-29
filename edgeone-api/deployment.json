@@ -1,0 +1,29 @@
+{
+  "provider": "Tencent EdgeOne Pages",
+  "projectName": "unbrainrot-search-api-public",
+  "projectId": "makers-17f9lmotpcgq",
+  "deploymentId": "dpqxn5by8upx",
+  "area": "overseas",
+  "origin": "https://unbrainrot-search-api-public-cliexv0t.edgeone.dev",
+  "consoleUrl": "https://console.cloud.tencent.com/edgeone/pages/project/makers-17f9lmotpcgq/deployment/dpqxn5by8upx",
+  "frontend": "https://observl.github.io/UnBrainrot/",
+  "publicSearchApi": "https://unbrainrot-knowledge.griffonage2077.workers.dev/api/search",
+  "cloudflareVersion": "68ab0d23-957e-4f58-858c-5fbd45750cbe",
+  "requiresTemporarySignature": false,
+  "validation": {
+    "query": "量子纠缠",
+    "page1": {
+      "status": 200,
+      "items": 17,
+      "newToShippedCatalog": 17
+    },
+    "page2": {
+      "status": 200,
+      "items": 17,
+      "newToPage1": 17,
+      "newToShippedCatalog": 17
+    },
+    "corsOrigin": "https://observl.github.io",
+    "unitTests": 17
+  }
+}

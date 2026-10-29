@@ -1,0 +1,13 @@
+{
+  "name": "unbrainrot-search-api-public",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --ignore-scripts --no-audit --no-fund",
+  "outputDirectory": "public",
+  "nodeVersion": "22.11.0",
+  "mainlandRegions": [
+    "ap-guangzhou"
+  ],
+  "overseasRegions": [
+    "ap-hongkong"
+  ]
+}

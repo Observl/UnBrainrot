@@ -5,3 +5,10 @@ node_modules/
 .cache/
 .wrangler/
 preview-*.png
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  
+.edgeone/
