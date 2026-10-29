@@ -1,0 +1,6 @@
+apps:
+- path: app.yaml
+  sha256: ccc8772b5f26ae154eff38e3ecadb3e6461c8b1598a2d4778495fc02b84d0e22
+  size: 20660
+format: dify.app
+format_version: 1

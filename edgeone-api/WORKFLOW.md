@@ -37,7 +37,7 @@ API 向 webhook 发送 `POST` JSON，每次处理当前页的候选内容，不�
 
 `keep` 必须是布尔值。可以全部删除。未知、重复、遗漏 ID 或格式不符会使整批回退到默认结果。workflow 不能添加内容、修改原标题/地址或放宽硬规则；原有排序保持不变。
 
-请求超时为 4 秒，不重试。超时、服务故障或格式异常时回退默认规则，并在 API `warnings` 中返回提示；不会把内部错误或密钥发给浏览器。
+通用 webhook 请求超时为 4 秒，Dify 模式为 15 秒，均不重试。超时、服务故障或格式异常时回退默认规则，并在 API `warnings` 中返回提示；不会把内部错误或密钥发给浏览器。
 
 搜索 API 追加：
 
@@ -52,3 +52,7 @@ API 向 webhook 发送 `POST` JSON，每次处理当前页的候选内容，不�
 ## 接入检查
 
 先让 workflow 原样为所有 ID 返回 `keep:true`，再加入模型判断。内容标题和简介均是不可信来源数据，不应被 workflow 当作指令执行。模型输出应由 workflow 转成上述严格 JSON，而不是直接返回自由文本。
+
+## Dify / DeepSeek 工作流
+
+可导入包、节点源码、测试输入及密钥配置见 [工作流说明](../workflows/deepseek-filter/README.md)。使用 `CONTENT_WORKFLOW_KIND=dify` 对接 Dify `/v1/workflows/run`；默认仍为原有 webhook 协议。

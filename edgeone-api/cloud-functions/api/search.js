@@ -21,6 +21,6 @@ export default async function onRequest({request}){
  outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;const data=r.value;hasMore ||=data.hasMore;warnings.push(...(data.warnings||[]));filtered+=data.filtered||0;const valid=data.items.filter(x=>eligible(x,minViews)&&(discovery||relevant(x,q))&&(url.searchParams.get('topic')!=='经典名著'||classicLiterature.test(x.title+' '+x.tags+' '+x.desc)));filtered+=data.items.length-valid.length;items.push(...valid)});
  if(!success)return Response.json({error:warnings.join('；'),mode:'error'},{status:503,headers});
  const videos=items.filter(x=>x.kind!=='article'),articles=items.filter(x=>x.kind==='article');items=[];while(videos.length||articles.length){items.push(...videos.splice(0,2),...articles.splice(0,1))}
- const reviewed=await filterWithWorkflow(items,{query:q,page,discovery,minViews});items=reviewed.items;filtered+=reviewed.workflow.filtered;if(reviewed.warning)warnings.push(reviewed.warning);
+ const reviewed=await filterWithWorkflow(items,{query:q,page,topic:url.searchParams.get('topic')||'全部',discovery,minViews});items=reviewed.items;filtered+=reviewed.workflow.filtered;if(reviewed.warning)warnings.push(reviewed.warning);
  return Response.json({items,workflow:reviewed.workflow,hasMore,page,filtered,warnings,mode:'live',updatedAt:new Date().toISOString(),minViews},{headers:{...headers,'Cache-Control':process.env.CONTENT_WORKFLOW_URL?'no-store':'public, max-age=60'}});
 }
