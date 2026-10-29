@@ -1,15 +1,15 @@
-import {xiaohongshuFeed} from '../lib/xiaohongshu.mjs';
+
 import {parseAIConfig,runConfiguredAI} from '../lib/configured-ai.mjs';
 import {unseen,rotatePool} from '../lib/discovery.mjs';
 import {reviewContentBatch} from '../lib/review-content.mjs';
 import {applyStaticRules} from '../lib/content-rules.mjs';
 import {createContentBatch} from '../lib/content-json.js';
-import {newsFeed,newsTopics} from '../lib/news.mjs';
+import {newsTopics} from '../lib/news.mjs';
 import {verifyCreators} from '../lib/creators.mjs';
-import {filterWithWorkflow} from '../lib/workflow.mjs';
+
 import {searchVideos} from '../lib/bilibili.mjs';
 import {isKnowledge} from '../lib/knowledge.js';
-import {articleFeed} from '../lib/feeds.mjs';
+import {publicArticleFeed} from '../lib/public-articles.mjs';
 const origins=new Set(['https://observl.github.io','https://unbrainrot-knowledge.griffonage2077.workers.dev']);
 export default async function onRequest({request}){
  const url=new URL(request.url),origin=request.headers.get('origin');let options={},ai=null;
@@ -22,12 +22,11 @@ export default async function onRequest({request}){
  const page=Math.max(1,Math.min(50,parseInt(url.searchParams.get('page'))||1));
  const source=url.searchParams.get('source')||'all',discovery=url.searchParams.get('discovery')==='1',topic=url.searchParams.get('topic')||'全部',isNews=newsTopics.includes(topic),stage=url.searchParams.get('delivery')||'reviewed';
  if(!['collected','rules','reviewed'].includes(stage))return Response.json({error:'无效交付阶段'},{status:400,headers});
- const workflowEnabled=ai?.provider==='static'?false:Boolean(ai||process.env.CONTENT_WORKFLOW_URL);const exclude=discovery&&Array.isArray(options.excludeIds)?options.excludeIds.filter(x=>typeof x==='string'&&x.length<=2048).slice(-240):[];const seed=discovery?(url.searchParams.get('seed')||'').slice(0,100):'';const articlePage=discovery?1:page;if(workflowEnabled&&stage==='rules')return Response.json({error:'workflow 已启用，不使用默认规则；请选择 collected 或 reviewed'},{status:400,headers});
+ const workflowEnabled=ai?.provider==='static'?false:Boolean(ai||process.env.CONTENT_WORKFLOW_URL);const exclude=discovery&&Array.isArray(options.excludeIds)?options.excludeIds.filter(x=>typeof x==='string'&&x.length<=2048).slice(-700):[];const seed=discovery?(url.searchParams.get('seed')||'').slice(0,100):'';const articlePage=discovery?1:page;if(workflowEnabled&&stage==='rules')return Response.json({error:'workflow 已启用，不使用默认规则；请选择 collected 或 reviewed'},{status:400,headers});
  const tasks=[];
- if(isNews)tasks.push(['新闻',()=>newsFeed(topic,workflowEnabled||discovery?'':q,articlePage,{exclude,seed})]);
+ if(isNews)tasks.push(['图文',()=>publicArticleFeed(workflowEnabled||discovery?'':q,articlePage,fetch,{exclude,seed})]);
  if(!isNews&&['all','bilibili'].includes(source))tasks.push(['B站',async()=>{const data=await searchVideos(q,page,url.searchParams.get('order'));const raw=unseen(data.candidates||data.items,exclude);const candidates=workflowEnabled?raw:raw.filter(isKnowledge);const checked=await verifyCreators(candidates,{retainRejected:true});const enriched=new Map(checked.items.map(x=>[x.id,x]));return {...data,items:raw.map(x=>enriched.get(x.id)||x),warnings:checked.unavailable?['部分作者信息无法核实']:[]}}]);
- if(!isNews&&['all','articles'].includes(source))tasks.push(['图文',()=>articleFeed(workflowEnabled?'':discovery?(topic==='经典名著'?'文学':''):q,articlePage,fetch,{exclude,seed})]);
- if(!isNews&&['all','articles','xiaohongshu'].includes(source))tasks.push(['小红书',()=>xiaohongshuFeed(q,articlePage,{exclude,seed})]);
+ if(!isNews&&['all','articles'].includes(source))tasks.push(['图文',()=>publicArticleFeed(workflowEnabled?'':discovery?(topic==='经典名著'?'文学':''):q,articlePage,fetch,{exclude,seed})]);
  const outcomes=await Promise.allSettled(tasks.map(([,fn])=>fn()));let raw=[],hasMore=false,warnings=[],success=0;
  outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;hasMore ||=r.value.hasMore;warnings.push(...(r.value.warnings||[]));const limit=source==='all'?({'B站':16,'图文':8,'小红书':8}[tasks[i][0]]||12):32;raw.push(...r.value.items.slice(0,limit))});
  if(!success)return Response.json({error:warnings.join('；'),mode:'error'},{status:503,headers});
