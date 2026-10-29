@@ -1,3 +1,4 @@
+import {filterWithWorkflow} from '../lib/workflow.mjs';
 import {searchVideos} from '../lib/bilibili.mjs';
 import {articleFeed} from '../lib/feeds.mjs';
 import {eligible,relevant} from '../lib/knowledge.js';
@@ -18,5 +19,6 @@ export default async function onRequest({request}){
  outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;const data=r.value;hasMore ||=data.hasMore;warnings.push(...(data.warnings||[]));filtered+=data.filtered||0;const valid=data.items.filter(x=>eligible(x,minViews)&&(discovery||relevant(x,q)));filtered+=data.items.length-valid.length;items.push(...valid)});
  if(!success)return Response.json({error:warnings.join('；'),mode:'error'},{status:503,headers});
  const videos=items.filter(x=>x.kind!=='article'),articles=items.filter(x=>x.kind==='article');items=[];while(videos.length||articles.length){items.push(...videos.splice(0,2),...articles.splice(0,1))}
- return Response.json({items,hasMore,page,filtered,warnings,mode:'live',updatedAt:new Date().toISOString(),minViews},{headers:{...headers,'Cache-Control':'public, max-age=60'}});
+ const reviewed=await filterWithWorkflow(items,{query:q,page,discovery,minViews});items=reviewed.items;filtered+=reviewed.workflow.filtered;if(reviewed.warning)warnings.push(reviewed.warning);
+ return Response.json({items,workflow:reviewed.workflow,hasMore,page,filtered,warnings,mode:'live',updatedAt:new Date().toISOString(),minViews},{headers:{...headers,'Cache-Control':process.env.CONTENT_WORKFLOW_URL?'no-store':'public, max-age=60'}});
 }

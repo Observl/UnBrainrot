@@ -25,3 +25,7 @@ GitHub Pages → Cloudflare `/api/search` → EdgeOne Node.js `/api/search` → 
 本次含中国大陆的预览部署：健康检查 200；“量子纠缠”第一页 17 项；第二页另 17 项，均为实时数据。仅境外默认域名也已不带签名返回实时结果。Cloudflare 端到端验证结果在部署记录中单独记录，不由直连结果推断。
 
 官方参考：[默认域名的地域与预览限制](https://edgeone.ai/document/175201428435140608)、[Node.js 云函数](https://pages.edgeone.ai/document/node-functions)。
+
+## AI workflow
+
+可选筛选接口及环境变量配置见 [WORKFLOW.md](./WORKFLOW.md)。未配置时保留默认规则。
