@@ -1,0 +1,1 @@
+{"name":"unbrainrot-mvp","version":"0.1.0","private":true,"description":"A finite, intentional knowledge discovery MVP","scripts":{"start":"node server.mjs","check":"node --check dist/app.js"}}
