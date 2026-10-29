@@ -28,3 +28,15 @@
 ## 当前验证边界
 
 已验证公开元数据、原封面地址、服务端搜索、筛选规则和页面交互。B站搜索有间歇性 412 风控，不能承诺持续可用。GitHub Pages 没有服务端运行时，实时搜索由独立 Cloudflare Worker 提供。
+
+## 待上线：实时瀑布流
+
+开发分支将目录分页改为不等高瀑布流，滚动加载 B站搜索下一页，按 BV 号去重；搜索词、主题变化时取消旧请求。失败显示错误并暂停自动请求，不再把现有目录替换成实时搜索结果。空关键词发现页按最新发布排序。
+
+搜索已迁移到现行 `/x/web-interface/wbi/search/type`；需要签名时获取动态 WBI 密钥与匿名访问会话。已在本机验证目录外关键词返回新视频，Cloudflare 出口仍被 B站 HTTP 412 拒绝，因此不能宣称线上搜索已修复。
+
+用户已授权使用免费 Render 新加坡 Node 服务作为搜索后端。`render.yaml` 已准备，服务必须监听 `HOST=0.0.0.0`，健康检查为 `/api/health`。Render 连接目前返回 `Unknown tool`，尚未创建或部署服务。浏览器操作也被停止，未进行新版瀑布流的实际浏览器验收。
+
+接通 Render 后，先验证其 `/api/search?q=量子纠缠&page=1` 返回 `mode: live` 和目录外的视频，再验证第 2 页返回新 BV 号。成功后把真实 Render 地址配置到 Cloudflare Worker 的 `SEARCH_ORIGIN`，必须为 HTTPS 的 `.onrender.com` 地址；随后发布 Worker 与 GitHub Pages。不要填入猜测地址，也不要在验证前把 412 标记为解决。
+
+参考：[WBI 请求格式与参考测试向量](https://github.com/pskdje/bilibili-API-collect/blob/main/docs/misc/sign/wbi.md)。自动测试包含签名参考向量、上游分页、结果缓存、娱乐过滤、412 失败与匿名签名流程。
