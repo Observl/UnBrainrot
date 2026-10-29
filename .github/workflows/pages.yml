@@ -23,8 +23,6 @@ jobs:
           node-version: '22'
       - name: Validate functionality
         run: node --test web/tests/*.test.mjs
-      - name: Refresh public Bilibili metadata
-        run: node web/scripts/sync-bilibili.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

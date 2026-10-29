@@ -1,4 +1,6 @@
 import {searchVideos} from '../lib/bilibili.mjs';
+import {articleFeed} from '../lib/feeds.mjs';
+import {eligible,relevant} from '../lib/knowledge.js';
 const origins=new Set(['https://observl.github.io','https://unbrainrot-knowledge.griffonage2077.workers.dev']);
 export default async function onRequest({request}){
  const url=new URL(request.url),origin=request.headers.get('origin');
@@ -9,6 +11,12 @@ export default async function onRequest({request}){
  const q=(url.searchParams.get('q')||'').trim();
  if(!q||q.length>100)return Response.json({error:'搜索词需要 1–100 字符'},{status:400,headers});
  const page=Math.max(1,Math.min(50,parseInt(url.searchParams.get('page'))||1));
- try{return Response.json(await searchVideos(q,page,url.searchParams.get('order')),{headers:{...headers,'Cache-Control':'public, max-age=60'}})}
- catch(error){return Response.json({error:error.message,mode:'error'},{status:503,headers:{...headers,'Cache-Control':'no-store'}})}
+ const minViews=Math.max(10000,Math.min(100000,Number(url.searchParams.get('minViews'))||10000));
+ const source=url.searchParams.get('source')||'all',discovery=url.searchParams.get('discovery')==='1';
+ const tasks=[];if(source!=='articles')tasks.push(['B站',()=>searchVideos(q,page,url.searchParams.get('order'))]);if(source!=='bilibili')tasks.push(['图文',()=>articleFeed(discovery?'':q,page)]);
+ const outcomes=await Promise.allSettled(tasks.map(([,fn])=>fn()));let items=[],hasMore=false,warnings=[],success=0,filtered=0;
+ outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;const data=r.value;hasMore ||=data.hasMore;warnings.push(...(data.warnings||[]));filtered+=data.filtered||0;const valid=data.items.filter(x=>eligible(x,minViews)&&(discovery||relevant(x,q)));filtered+=data.items.length-valid.length;items.push(...valid)});
+ if(!success)return Response.json({error:warnings.join('；'),mode:'error'},{status:503,headers});
+ const videos=items.filter(x=>x.kind!=='article'),articles=items.filter(x=>x.kind==='article');items=[];while(videos.length||articles.length){items.push(...videos.splice(0,2),...articles.splice(0,1))}
+ return Response.json({items,hasMore,page,filtered,warnings,mode:'live',updatedAt:new Date().toISOString(),minViews},{headers:{...headers,'Cache-Control':'public, max-age=60'}});
 }
