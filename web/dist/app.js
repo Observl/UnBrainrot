@@ -1,7 +1,7 @@
-import {discoveryPlan,nextDiscoveryRound} from './discovery.js?v=31';
-import {parseContentBatch,videoMedia} from './content-json.js?v=31';
-import {createCardWindow} from './card-window.js?v=31';
-import {eligible,relevant,text} from './knowledge.js?v=31';
+import {discoveryPlan,nextDiscoveryRound} from './discovery.js?v=32';
+import {parseContentBatch,videoMedia} from './content-json.js?v=32';
+import {createCardWindow} from './card-window.js?v=32';
+import {eligible,relevant,text} from './knowledge.js?v=32';
 import {API_BASE} from './config.js';
 const $=s=>document.querySelector(s);
 const COVER_PLACEHOLDER='./assets/cover-placeholder.svg';
