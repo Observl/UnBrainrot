@@ -4,8 +4,6 @@ import {unseen,rotatePool} from './discovery.mjs';
 
 // Read public HTML only: no site API, RSS, login, cookies, or wall bypass.
 export const publicSites=[
- {id:'aeon',name:'Aeon',url:'https://aeon.co/',paths:/^\/(?:essays|ideas)\/[^/]+\/?$/},
- {id:'noema',name:'Noema',url:'https://www.noemamag.com/',paths:/^\/[^/]+\/?$/,exclude:/^\/(?:about|contact|subscribe|newsletter|privacy|terms|category|author|issues?|search|donate)(?:\/|$)/i},
  {id:'quanta',name:'Quanta',url:'https://www.quantamagazine.org/',paths:/\/[^/]+-\d{8}\/?$/}
 ];
 const headers={'User-Agent':'UnBrainrot/0.7 Public Article Reader','Accept':'text/html, text/plain;q=0.8'};
