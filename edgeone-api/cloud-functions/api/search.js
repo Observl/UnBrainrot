@@ -1,3 +1,4 @@
+import {reserveCandidates} from '../lib/reserve.mjs';
 
 import {parseAIConfig,runConfiguredAI} from '../lib/configured-ai.mjs';
 import {unseen,rotatePool} from '../lib/discovery.mjs';
@@ -27,8 +28,9 @@ export default async function onRequest({request}){
  if(isNews)tasks.push(['图文',()=>publicArticleFeed(workflowEnabled||discovery?'':q,articlePage,fetch,{exclude,seed})]);
  if(!isNews&&['all','bilibili'].includes(source))tasks.push(['B站',async()=>{const data=await searchVideos(q,page,url.searchParams.get('order'));const raw=unseen(data.candidates||data.items,exclude);const candidates=workflowEnabled?raw:raw.filter(isKnowledge);const checked=await verifyCreators(candidates,{retainRejected:true});const enriched=new Map(checked.items.map(x=>[x.id,x]));return {...data,items:raw.map(x=>enriched.get(x.id)||x),warnings:checked.unavailable?['部分作者信息无法核实']:[]}}]);
  if(!isNews&&['all','articles'].includes(source))tasks.push(['图文',()=>publicArticleFeed(workflowEnabled?'':discovery?(topic==='经典名著'?'文学':''):q,articlePage,fetch,{exclude,seed})]);
+ if(!isNews&&discovery&&['all','bilibili'].includes(source))tasks.push(['后备科普',()=>reserveCandidates({exclude,seed,query:q,discovery,limit:6})]);
  const outcomes=await Promise.allSettled(tasks.map(([,fn])=>fn()));let raw=[],hasMore=false,warnings=[],success=0;
- outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;hasMore ||=r.value.hasMore;warnings.push(...(r.value.warnings||[]));const limit=source==='all'?({'B站':16,'图文':8,'小红书':8}[tasks[i][0]]||12):32;raw.push(...r.value.items.slice(0,limit))});
+ outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;hasMore ||=r.value.hasMore;warnings.push(...(r.value.warnings||[]));const limit=source==='all'?({'B站':16,'图文':8,'后备科普':6}[tasks[i][0]]||12):32;raw.push(...r.value.items.slice(0,limit))});
  if(!success)return Response.json({error:warnings.join('；'),mode:'error'},{status:503,headers});
  const context={query:q,page,topic,discovery};const collected=createContentBatch(discovery?rotatePool(unseen(raw,exclude),seed):raw,context,{page,hasMore});
  let batch=collected,workflow={status:'disabled',filtered:0};if(stage==='rules')batch=applyStaticRules(collected);if(stage==='reviewed'){batch=await reviewContentBatch(collected,ai?.provider==='static'?{url:''}:ai?{url:ai.endpoint||'https://configured-ai.invalid',reviewer:(items,ctx,opts)=>runConfiguredAI(items,ctx,ai,opts)}:{});workflow=batch.workflow;warnings.push(...batch.warnings)}

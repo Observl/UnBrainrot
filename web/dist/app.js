@@ -1,7 +1,7 @@
-import {discoveryPlan,nextDiscoveryRound} from './discovery.js?v=25';
-import {parseContentBatch,videoMedia} from './content-json.js?v=25';
-import {createCardWindow} from './card-window.js?v=25';
-import {eligible,relevant,text} from './knowledge.js?v=25';
+import {discoveryPlan,nextDiscoveryRound} from './discovery.js?v=26';
+import {parseContentBatch,videoMedia} from './content-json.js?v=26';
+import {createCardWindow} from './card-window.js?v=26';
+import {eligible,relevant,text} from './knowledge.js?v=26';
 import {API_BASE} from './config.js';
 const $=s=>document.querySelector(s);
 const storageRead=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
@@ -41,7 +41,7 @@ function resetPreload(){preloadQueue=[];preloadPending=null;preloadError=null;pr
 async function fetchFeedPage(page,id,explicit,ai){
  const plan=discoveryPlan(topic,discoveryRound,page),query=explicit||plan.query;
  const queued=preloadQueue.flatMap(b=>b.items.flatMap(x=>[x.id,x.url]));
- const exclusionPool=[...new Set([...seen.keys(),...results.flatMap(x=>[x.id,x.url]),...queued,...rejectedForFeed])];let exclusionBytes=0;const excludeIds=explicit?[]:exclusionPool.reverse().filter(id=>{if(typeof id!=='string'||exclusionBytes+id.length>55000)return false;exclusionBytes+=id.length;return true}).slice(0,700).reverse();
+ const exclusionPool=[...new Set([...results.flatMap(x=>[x.id,x.url]),...queued,...rejectedForFeed])];let exclusionBytes=0;const excludeIds=explicit?[]:exclusionPool.reverse().filter(id=>{if(typeof id!=='string'||exclusionBytes+id.length>55000)return false;exclusionBytes+=id.length;return true}).slice(0,700).reverse();
  const params={q:query,page:explicit?page:plan.page,order:'totalrank',source:'all',discovery:explicit?'0':'1',topic,seed:explicit?'':plan.seed+':'+page,excludeIds};
  const controller=new AbortController(),parent=searchController.signal,abort=()=>controller.abort();parent.addEventListener('abort',abort,{once:true});if(parent.aborted)abort();const timeout=setTimeout(abort,85000);
  try{const response=await fetch((API_BASE||'.')+'/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({params,ai}),signal:controller.signal});const raw=await response.json();if(id!==requestId)throw new DOMException('Stale feed','AbortError');if(!response.ok||raw.mode!=='live')throw Error(raw.error||'搜索暂不可用');const data=parseContentBatch(raw);if(data.stage!=='reviewed')throw Error('未完成筛选的内容不可展示');if(data.workflow?.status==='error')throw Error(data.warnings?.at(-1)||'AI 筛选失败，请重试');
@@ -70,7 +70,7 @@ $('#searchForm').addEventListener('submit',e=>{e.preventDefault();batch=0;if($('
 $('#search').addEventListener('input',()=>{searchController?.abort();requestId++;resetPreload();loading=false;hasMore=false;batch=0;if($('#searchMode').value==='index'){results=indexed}else{results=[];setState('B站实时 · 输入后搜索')}render()});
 $('#searchMode').onchange=()=>{searchController?.abort();requestId++;resetPreload();loading=false;batch=0;hasMore=false;results=indexed;lastError='';feedPaused=false;setState($('#searchMode').value==='live'?'搜索 B站…':`B站目录 · ${indexed.length} 项`);render();if($('#searchMode').value==='live')searchLive()};
 function switchView(next){searchController?.abort();requestId++;resetPreload();loading=false;view=next;topic='全部';batch=0;hasMore=false;results=indexed;$('#search').value='';$('#searchMode').value=next==='explore'&&liveAvailable?'live':'index';lastError='';feedPaused=false;setState(next==='explore'?`B站目录 · ${indexed.length} 项`:'');document.querySelectorAll('.nav').forEach(n=>{n.classList.toggle('active',n.dataset.view===view);if(n.dataset.view===view)n.setAttribute('aria-current','page');else n.removeAttribute('aria-current')});render();if(next==='explore'&&liveAvailable)searchLive()}
-$('#refreshFeed').onclick=()=>{if(view!=='explore')switchView('explore');else{if($('#search').value.trim())$('#search').value='';searchLive()}};$('#showSeen').onclick=()=>{seen.clear();try{localStorage.removeItem('ub-seen-v1')}catch{}searchLive()};$('#reset').onclick=()=>switchView('explore');$('#more').onclick=()=>{feedPaused=false;searchLive(livePage>0)};
+$('#refreshFeed').onclick=()=>{if(view!=='explore')switchView('explore');else{if($('#search').value.trim())$('#search').value='';searchLive()}};$('#reset').onclick=()=>switchView('explore');$('#more').onclick=()=>{feedPaused=false;searchLive(livePage>0)};
 let layoutFrame=0,lastWidth=0,fullLayout=false;
 function scheduleLayout(all=false){fullLayout ||=all;if(!layoutFrame)layoutFrame=requestAnimationFrame(()=>{layoutFrame=0;layoutMasonry(fullLayout);fullLayout=false;maybeLoadMore()})}
 function layoutMasonry(all=false){const grid=$('#cards'),style=getComputedStyle(grid);if(style.display!=='grid')return;const unit=parseFloat(style.gridAutoRows)||8,gap=parseFloat(style.rowGap)||20;const cards=[...grid.querySelectorAll('.card:not([data-virtual="placeholder"])')].filter(c=>all||!c.dataset.measured);const spans=cards.map(c=>Math.ceil((c.querySelector('.card-body').getBoundingClientRect().height+gap)/(unit+gap)));cards.forEach((c,i)=>{c.style.gridRowEnd='span '+spans[i];c.dataset.measured='1'})}
