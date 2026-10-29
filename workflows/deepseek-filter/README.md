@@ -44,3 +44,7 @@ Dify 模式服务器请求超时25秒；网页请求55秒。两轮模型调用�
 ## 维护
 
 在项目根目录运行 `node workflows/deepseek-filter/build.mjs` 重建 DSL。`provider.json` 只存非敏感模型/插件标识，`system-prompt.txt` 为两轮共同内容标准。
+
+## 页面 Dify 对接参数更新
+
+页面填写基础地址 https://api.dify.ai/v1、Dify应用Key、输入变量payload、输出变量result。当前包已移除播放量要求；作者认证与粉丝要求仍由Dify判断。需要重新导入并发布以更新旧流程的筛选指令。网站不再提供直接模型API选项，包内部模型由Dify管理。

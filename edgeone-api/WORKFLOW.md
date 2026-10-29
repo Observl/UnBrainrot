@@ -15,3 +15,7 @@ Dify 配置 `CONTENT_WORKFLOW_KIND=dify`，URL为HTTPS `/v1/workflows/run`，`CO
 所有决定必须覆盖当前输入ID且不能重复或新增；完整JSON输出必须保留batchId和受保留决定对应的items。最终内容取自原始来源，不接受模型改写链接。
 
 状态：disabled（静态路径）、applied（workflow成功）、error（workflow失败，未采用默认规则）。
+
+## Dify 基础地址与变量映射
+
+当前支持 https://api.dify.ai/v1 基础地址，自动补调用路径。页面可配置输入变量和输出变量，兼容JSON对象/文本及筛选后的条目数组。配置与错误说明见 [当前说明](../contracts/PERSONALIZATION.md)。全站环境配置可使用 CONTENT_WORKFLOW_INPUT_VARIABLE / CONTENT_WORKFLOW_OUTPUT_VARIABLE，默认payload / result。Dify等待结果上限45秒。

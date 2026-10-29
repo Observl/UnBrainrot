@@ -48,10 +48,6 @@
         "topic": {
           "type": "string"
         },
-        "minViews": {
-          "type": "number",
-          "minimum": 10000
-        },
         "discovery": {
           "type": "boolean"
         }
