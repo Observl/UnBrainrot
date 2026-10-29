@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: unbrainrot-search
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: node --test web/tests/*.test.mjs
+    startCommand: node web/server.mjs
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: HOST
+        value: 0.0.0.0
