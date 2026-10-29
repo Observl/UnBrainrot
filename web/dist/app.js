@@ -1,7 +1,7 @@
-import {discoveryPlan,nextDiscoveryRound} from './discovery.js?v=22';
-import {parseContentBatch,videoMedia} from './content-json.js?v=22';
-import {createCardWindow} from './card-window.js?v=22';
-import {eligible,relevant,text} from './knowledge.js?v=22';
+import {discoveryPlan,nextDiscoveryRound} from './discovery.js?v=23';
+import {parseContentBatch,videoMedia} from './content-json.js?v=23';
+import {createCardWindow} from './card-window.js?v=23';
+import {eligible,relevant,text} from './knowledge.js?v=23';
 import {API_BASE} from './config.js';
 const $=s=>document.querySelector(s);
 const topics=['全部','头版头条','财经动态','商业','哲学与人文','经典名著','心理与认知','社会与文化','科技与伦理','前沿科学'];
@@ -45,7 +45,7 @@ async function fetchFeedPage(page,id,explicit,ai){
  const plan=discoveryPlan(topic,discoveryRound,page),query=explicit||plan.query;
  const queued=preloadQueue.flatMap(b=>b.items.flatMap(x=>[x.id,x.url]));
  const excludeIds=explicit?[]:[...new Set([...seen.keys(),...results.flatMap(x=>[x.id,x.url]),...queued,...rejectedForFeed])].slice(-240);
- const params={q:query,page:explicit?page:plan.page,order:'totalrank',source:$('#source').value,discovery:explicit?'0':'1',topic,seed:explicit?'':plan.seed,excludeIds};
+ const params={q:query,page:explicit?page:plan.page,order:'totalrank',source:$('#source').value,discovery:explicit?'0':'1',topic,seed:explicit?'':plan.seed+':'+page,excludeIds};
  const controller=new AbortController(),parent=searchController.signal,abort=()=>controller.abort();parent.addEventListener('abort',abort,{once:true});if(parent.aborted)abort();const timeout=setTimeout(abort,85000);
  try{const response=await fetch((API_BASE||'.')+'/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({params,ai}),signal:controller.signal});const raw=await response.json();if(id!==requestId)throw new DOMException('Stale feed','AbortError');if(!response.ok||raw.mode!=='live')throw Error(raw.error||'搜索暂不可用');const data=parseContentBatch(raw);if(data.stage!=='reviewed')throw Error('未完成筛选的内容不可展示');if(data.workflow?.status==='error')throw Error(data.warnings?.at(-1)||'AI 筛选失败，请重试');
  for(const d of data.decisions||[])if(d.keep===false&&typeof d.id==='string'){rejectedForFeed.delete(d.id);rejectedForFeed.add(d.id)}while(rejectedForFeed.size>400)rejectedForFeed.delete(rejectedForFeed.keys().next().value);

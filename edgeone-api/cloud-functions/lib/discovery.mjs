@@ -1,3 +1,4 @@
 const hash=value=>{let h=2166136261;for(const c of String(value))h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0};
 export function unseen(items,exclude=[]){const ids=new Set(exclude);return items.filter(x=>!ids.has(x.id)&&!ids.has(x.url))}
-export function rotatePool(items,seed=''){return seed?[...items].sort((a,b)=>hash(seed+':'+a.id)-hash(seed+':'+b.id)):items}
+// Seeded Fisher-Yates avoids correlated URL hash ordering; interleave providers.
+export function rotatePool(items,seed=''){if(!seed)return items;let state=hash(seed)||1;const random=()=>{state^=state<<13;state^=state>>>17;state^=state<<5;return (state>>>0)/4294967296};const shuffled=[...items];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]}const groups=new Map();for(const item of shuffled){const key=item.provider||item.source||'unknown';if(!groups.has(key))groups.set(key,[]);groups.get(key).push(item)}const mixed=[];while(mixed.length<shuffled.length)for(const group of groups.values())if(group.length)mixed.push(group.shift());return mixed}
