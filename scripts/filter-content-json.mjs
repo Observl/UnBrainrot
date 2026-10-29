@@ -1,0 +1,3 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {applyStaticRules} from '../edgeone-api/cloud-functions/lib/content-rules.mjs';
+const [input,output]=process.argv.slice(2);if(!input||!output){console.error('Usage: node scripts/filter-content-json.mjs collected.json rules.json');process.exitCode=1}else{try{const batch=applyStaticRules(JSON.parse(await readFile(input,'utf8')));await writeFile(output,JSON.stringify(batch,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({batchId:batch.batchId,stage:batch.stage,items:batch.items.length}))}catch(e){console.error(e.message);process.exitCode=1}}

@@ -56,3 +56,7 @@ API 向 webhook 发送 `POST` JSON，每次处理当前页的候选内容，不�
 ## Dify / DeepSeek 工作流
 
 可导入包、节点源码、测试输入及密钥配置见 [工作流说明](../workflows/deepseek-filter/README.md)。使用 `CONTENT_WORKFLOW_KIND=dify` 对接 Dify `/v1/workflows/run`；默认仍为原有 webhook 协议。
+
+## 标准化 JSON 文档管线
+
+现支持 collected / rules / reviewed 文件内容交付与下载，Dify 可返回完整 reviewed JSON。模型决定仍以输入 ID 为准，不能新增来源条目。规范、Schema、离线静态筛选入口和新版包见 [交付说明](../contracts/README.md)。旧版 version=1 仅 decisions 的响应仍兼容。

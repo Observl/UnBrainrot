@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UnBrainrot Content Batch 1.0",
+  "type": "object",
+  "required": [
+    "schema",
+    "schemaVersion",
+    "version",
+    "batchId",
+    "stage",
+    "createdAt",
+    "context",
+    "items",
+    "pagination",
+    "decisions"
+  ],
+  "properties": {
+    "schema": {
+      "const": "unbrainrot.content-batch"
+    },
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "version": {
+      "const": "1"
+    },
+    "batchId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage": {
+      "enum": [
+        "collected",
+        "rules",
+        "reviewed"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "minViews": {
+          "type": "number",
+          "minimum": 10000
+        },
+        "discovery": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "required": [
+        "page",
+        "hasMore"
+      ],
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "hasMore": {
+          "type": "boolean"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "url",
+          "media",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "video",
+              "article"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "description": {
+            "type": "string"
+          },
+          "cover": {
+            "type": "string"
+          },
+          "views": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "followers": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "creatorVerified": {
+            "type": "boolean"
+          },
+          "media": {
+            "type": "object",
+            "required": [
+              "type",
+              "cover",
+              "width",
+              "height",
+              "aspectRatio",
+              "orientation"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "video",
+                  "image"
+                ]
+              },
+              "cover": {
+                "type": "string"
+              },
+              "width": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "height": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "aspectRatio": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "orientation": {
+                "enum": [
+                  "landscape",
+                  "portrait",
+                  "square",
+                  "unknown"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "keep"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "keep": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "stage": {
+            "enum": [
+              "rules",
+              "reviewed"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

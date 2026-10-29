@@ -8,5 +8,5 @@ function main({body,state,status_code}){
  const allowed=new Set(original.candidateIds),seen=new Set(),decisions=new Map(original.locked.map(x=>[x.id,x]));
  for(const d of data.decisions){if(!allowed.has(d.id)||seen.has(d.id)||typeof d.keep!=='boolean'||!reasons.has(d.reason)||typeof d.confidence!=='number'||!Number.isFinite(d.confidence)||d.confidence<0||d.confidence>1)throw Error('Invalid model decision');seen.add(d.id);decisions.set(d.id,{id:d.id,keep:d.keep&&d.confidence>=0.75&&d.reason==='relevant_depth',reason:d.reason,confidence:d.confidence})}
  const audit=original.ids.map(id=>decisions.get(id));
- return {result:JSON.stringify({version:'1',decisions:audit.map(({id,keep})=>({id,keep}))}),audit:JSON.stringify(audit)};
+ const decisionMap=new Map((original.batch.decisions||[]).map(x=>[x.id,x]));audit.forEach(x=>decisionMap.set(x.id,{...x,stage:'reviewed'}));const kept=new Set(audit.filter(x=>x.keep).map(x=>x.id));const result=original.batch.schema?{...original.batch,stage:'reviewed',items:original.batch.items.filter(x=>kept.has(x.id)),decisions:[...decisionMap.values()]}:{version:'1',decisions:audit.map(({id,keep})=>({id,keep}))};return {result:JSON.stringify(result),audit:JSON.stringify(audit)};
 }

@@ -1,1 +1,88 @@
-{"version":"1","context":{"query":"意识","topic":"心理与认知","page":1,"discovery":true,"minViews":10000},"items":[{"id":"sample-knowledge","kind":"video","title":"意识与认知科学：当前研究的关键问题","description":"介绍意识研究的方法、证据与局限。","source":"B站","author":"测试作者","views":20000,"followers":30000,"creatorVerified":true,"parts":1,"tags":"意识,认知科学"},{"id":"sample-trivia","kind":"video","title":"趣味问答：你能答对几道？","description":"猜谜与答题挑战。","source":"B站","views":90000,"followers":50000,"creatorVerified":true,"parts":1},{"id":"sample-literature","kind":"article","title":"卡夫卡《变形记》的文学解读","description":"从叙述视角与异化主题分析作品。","source":"测试来源","curated":true,"tags":"文学,经典名著"}]}
+{
+  "schema": "unbrainrot.content-batch",
+  "schemaVersion": "1.0",
+  "version": "1",
+  "batchId": "example-batch-001",
+  "stage": "collected",
+  "createdAt": "2026-10-29T14:26:12.604Z",
+  "context": {
+    "query": "意识",
+    "topic": "心理与认知",
+    "page": 1,
+    "discovery": true,
+    "minViews": 10000
+  },
+  "items": [
+    {
+      "id": "sample-knowledge",
+      "kind": "video",
+      "title": "意识与认知科学：当前研究的关键问题",
+      "description": "介绍意识研究的方法、证据与局限。",
+      "source": "B站",
+      "author": "测试作者",
+      "views": 20000,
+      "followers": 30000,
+      "creatorVerified": true,
+      "parts": 1,
+      "tags": "意识,认知科学",
+      "url": "https://example.org/sample-knowledge",
+      "desc": "介绍意识研究的方法、证据与局限。",
+      "cover": "",
+      "media": {
+        "type": "video",
+        "cover": "",
+        "width": null,
+        "height": null,
+        "aspectRatio": null,
+        "orientation": "unknown"
+      }
+    },
+    {
+      "id": "sample-trivia",
+      "kind": "video",
+      "title": "趣味问答：你能答对几道？",
+      "description": "猜谜与答题挑战。",
+      "source": "B站",
+      "views": 90000,
+      "followers": 50000,
+      "creatorVerified": true,
+      "parts": 1,
+      "url": "https://example.org/sample-trivia",
+      "desc": "猜谜与答题挑战。",
+      "cover": "",
+      "media": {
+        "type": "video",
+        "cover": "",
+        "width": null,
+        "height": null,
+        "aspectRatio": null,
+        "orientation": "unknown"
+      }
+    },
+    {
+      "id": "sample-literature",
+      "kind": "article",
+      "title": "卡夫卡《变形记》的文学解读",
+      "description": "从叙述视角与异化主题分析作品。",
+      "source": "测试来源",
+      "curated": true,
+      "tags": "文学,经典名著",
+      "url": "https://example.org/sample-literature",
+      "desc": "从叙述视角与异化主题分析作品。",
+      "cover": "",
+      "media": {
+        "type": "image",
+        "cover": "",
+        "width": null,
+        "height": null,
+        "aspectRatio": null,
+        "orientation": "unknown"
+      }
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "hasMore": false
+  },
+  "decisions": []
+}

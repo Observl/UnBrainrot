@@ -52,3 +52,7 @@ CONTENT_WORKFLOW_TOKEN=你的Dify应用APIKey
 已验证代码节点、输入输出契约、硬规则、低置信度处理和 Dify API 适配，未在你的 Dify 实例上完成导入及真实模型联调。
 
 官方依据：[DeepSeek API 模型标识](https://api-docs.deepseek.com/)、[JSON 输出](https://api-docs.deepseek.com/guides/json_mode/)。
+
+## 规范 JSON 文档交付（更新）
+
+当前包接受规范化内容文档（schemaVersion 1.0），结束节点 result 返回完整 reviewed JSON：含 batchId、内容、分页及逐条决定；也保留旧版 version=1 输入兼容。塔罗、占卜与非科学预测已加入硬规则及模型标准。详见 [交付契约](../../contracts/README.md)。更新后需要在 Dify 重新导入并发布，现有账号内的工作流不会自动改变。
