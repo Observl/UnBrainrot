@@ -1,3 +1,4 @@
+import {publicFetch} from './public-fetch.mjs';
 import {load} from 'cheerio';
 import {text,inferTopic,relevant} from './knowledge.js';
 import {unseen,rotatePool} from './discovery.mjs';
@@ -64,7 +65,7 @@ async function article(link,fetcher){
  const hit=pageCache.get(link.url);if(hit&&hit.until>Date.now())return hit.item;if(pending.has(link.url))return pending.get(link.url);
  const task=(async()=>{try{const {body,url}=await readHTML(link.url,link.site,fetcher);if(!permitted(url,await robots(link.site,fetcher)))throw Error('来源禁止抓取文章');const item=parsePublicArticle(body,url,link.site);collectLinks(body,link.site,await robots(link.site,fetcher));if(pageCache.size>=240)pageCache.delete(pageCache.keys().next().value);pageCache.set(link.url,{item,until:Date.now()+21600000});return item}catch{pageCache.set(link.url,{item:null,until:Date.now()+300000});return null}finally{pending.delete(link.url)}})();pending.set(link.url,task);return task;
 }
-export async function publicArticleFeed(query,page=1,fetcher=fetch,{exclude=[],seed=''}={}){
+export async function publicArticleFeed(query,page=1,fetcher=publicFetch,{exclude=[],seed=''}={}){
  const listing=await listings(fetcher);for(const link of listing.links)frontier.set(link.url,link);
  const batchNumber=Number(String(seed).split(':').at(-1))||page;if(batchNumber>1)await expandFrontier(fetcher);
  const pool=rotatePool(unseen([...frontier.values()],exclude).filter(link=>{const hit=pageCache.get(link.url);return !hit||hit.until<Date.now()||hit.item}),seed),candidates=pool.slice((page-1)*6,page*6),items=[];let cursor=0;

@@ -1,3 +1,4 @@
+import {publicFetch} from '../lib/public-fetch.mjs';
 import {reserveCandidates} from '../lib/reserve.mjs';
 
 import {parseAIConfig,runConfiguredAI} from '../lib/configured-ai.mjs';
@@ -25,7 +26,7 @@ export default async function onRequest({request}){
  if(!['collected','rules','reviewed'].includes(stage))return Response.json({error:'无效交付阶段'},{status:400,headers});
  const workflowEnabled=ai?.provider==='static'?false:Boolean(ai||process.env.CONTENT_WORKFLOW_URL);const exclude=discovery&&Array.isArray(options.excludeIds)?options.excludeIds.filter(x=>typeof x==='string'&&x.length<=2048).slice(-700):[];const seed=discovery?(url.searchParams.get('seed')||'').slice(0,100):'';const articlePage=discovery?1:page;if(workflowEnabled&&stage==='rules')return Response.json({error:'workflow 已启用，不使用默认规则；请选择 collected 或 reviewed'},{status:400,headers});
  const tasks=[];
- if(isNews)tasks.push(['图文',()=>publicArticleFeed(workflowEnabled||discovery?'':q,articlePage,fetch,{exclude,seed})]);
+ if(isNews)tasks.push(['图文',()=>publicArticleFeed(workflowEnabled||discovery?'':q,articlePage,publicFetch,{exclude,seed})]);
  if(!isNews&&['all','bilibili'].includes(source))tasks.push(['B站',async()=>{const data=await searchVideos(q,page,url.searchParams.get('order'));const raw=unseen(data.candidates||data.items,exclude);const candidates=workflowEnabled?raw:raw.filter(isKnowledge);const checked=await verifyCreators(candidates,{retainRejected:true});const enriched=new Map(checked.items.map(x=>[x.id,x]));return {...data,items:raw.map(x=>enriched.get(x.id)||x),warnings:checked.unavailable?['部分作者信息无法核实']:[]}}]);
  if(!isNews&&['all','articles'].includes(source))tasks.push(['图文',()=>publicArticleFeed(workflowEnabled?'':discovery?(topic==='经典名著'?'文学':''):q,articlePage,fetch,{exclude,seed})]);
  if(!isNews&&discovery&&['all','bilibili'].includes(source))tasks.push(['后备科普',()=>reserveCandidates({exclude,seed,query:q,discovery,limit:6})]);
