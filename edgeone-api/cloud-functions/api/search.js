@@ -1,3 +1,4 @@
+import {verifyCreators} from '../lib/creators.mjs';
 import {filterWithWorkflow} from '../lib/workflow.mjs';
 import {searchVideos} from '../lib/bilibili.mjs';
 import {articleFeed} from '../lib/feeds.mjs';
@@ -14,7 +15,7 @@ export default async function onRequest({request}){
  const page=Math.max(1,Math.min(50,parseInt(url.searchParams.get('page'))||1));
  const minViews=Math.max(10000,Math.min(100000,Number(url.searchParams.get('minViews'))||10000));
  const source=url.searchParams.get('source')||'all',discovery=url.searchParams.get('discovery')==='1';
- const tasks=[];if(source!=='articles')tasks.push(['B站',()=>searchVideos(q,page,url.searchParams.get('order'))]);if(source!=='bilibili')tasks.push(['图文',()=>articleFeed(discovery?'':q,page)]);
+ const tasks=[];if(source!=='articles')tasks.push(['B站',async()=>{const data=await searchVideos(q,page,url.searchParams.get('order'));const checked=await verifyCreators(data.items);return {...data,items:checked.items,filtered:data.filtered+checked.filtered,warnings:checked.unavailable?['部分作者信息无法核实，已排除相关视频']:[]}}]);if(source!=='bilibili')tasks.push(['图文',()=>articleFeed(discovery?'':q,page)]);
  const outcomes=await Promise.allSettled(tasks.map(([,fn])=>fn()));let items=[],hasMore=false,warnings=[],success=0,filtered=0;
  outcomes.forEach((r,i)=>{if(r.status==='rejected'){warnings.push(tasks[i][0]+'：'+r.reason.message);return}success++;const data=r.value;hasMore ||=data.hasMore;warnings.push(...(data.warnings||[]));filtered+=data.filtered||0;const valid=data.items.filter(x=>eligible(x,minViews)&&(discovery||relevant(x,q)));filtered+=data.items.length-valid.length;items.push(...valid)});
  if(!success)return Response.json({error:warnings.join('；'),mode:'error'},{status:503,headers});
