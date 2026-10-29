@@ -70,6 +70,6 @@ export async function publicArticleFeed(query,page=1,fetcher=fetch,{exclude=[],s
  const listing=await listings(fetcher);for(const link of listing.links)frontier.set(link.url,link);
  const batchNumber=Number(String(seed).split(':').at(-1))||page;if(batchNumber>1)await expandFrontier(fetcher);
  const pool=rotatePool(unseen([...frontier.values()],exclude).filter(link=>{const hit=pageCache.get(link.url);return !hit||hit.until<Date.now()||hit.item}),seed),candidates=pool.slice((page-1)*6,page*6),items=[];let cursor=0;
- await Promise.all(Array.from({length:3},async()=>{while(cursor<candidates.length){const item=await article(candidates[cursor++],fetcher);if(item&&relevant(item,query))items.push(item)}}));
- const ordered=new Map(items.map(x=>[x.url,x]));return {items:candidates.map(x=>ordered.get(x.url)).filter(Boolean),hasMore:pool.length>page*6||containerQueue.length>0,warnings:[...listing.warnings,...(items.length?[]:['本批没有可展示的新正文，继续查找其他公开页面'])]};
+ await Promise.all(Array.from({length:3},async()=>{while(cursor<candidates.length){const index=cursor++,item=await article(candidates[index],fetcher);if(item&&relevant(item,query))items[index]=item}}));
+ return {items:items.filter(Boolean),hasMore:pool.length>page*6||containerQueue.length>0,warnings:[...listing.warnings,...(items.some(Boolean)?[]:['本批没有可展示的新正文，继续查找其他公开页面'])]};
 }
