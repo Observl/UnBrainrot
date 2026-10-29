@@ -1,0 +1,1 @@
+{"model":{"completion_params":{"temperature":0.7},"mode":"chat","name":"deepseek-ai/DeepSeek-V4.1-Flash","provider":"langgenius/siliconflow/siliconflow"},"dependencies":[{"current_identifier":null,"type":"marketplace","value":{"marketplace_plugin_unique_identifier":"langgenius/siliconflow:0.0.64@6cf29a175480b384dcada3791849b2c30dfcff5d4ad2ee4b7eeb0dcd7c2b817f","version":null}}]}

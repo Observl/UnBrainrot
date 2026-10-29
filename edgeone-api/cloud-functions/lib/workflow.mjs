@@ -1,5 +1,5 @@
 /** Optional server-side workflow hook; default rules always run before this hook. */
-export async function filterWithWorkflow(items,context,{url=process.env.CONTENT_WORKFLOW_URL,token=process.env.CONTENT_WORKFLOW_TOKEN,fetcher=fetch,batch=null,kind=process.env.CONTENT_WORKFLOW_KIND||'webhook',timeoutMs=(kind==='dify'?15000:4000)}={}){
+export async function filterWithWorkflow(items,context,{url=process.env.CONTENT_WORKFLOW_URL,token=process.env.CONTENT_WORKFLOW_TOKEN,fetcher=fetch,batch=null,failureMode='default',kind=process.env.CONTENT_WORKFLOW_KIND||'webhook',timeoutMs=(kind==='dify'?25000:4000)}={}){
  if(!url)return {items,workflow:{status:'disabled',filtered:0}};
  try{
   const endpoint=new URL(url);
@@ -19,6 +19,6 @@ export async function filterWithWorkflow(items,context,{url=process.env.CONTENT_
   for(const d of data.decisions){if(seen.has(d.id)||typeof d.keep!=='boolean')throw Error('Invalid decision');seen.add(d.id);if(ids.has(d.id))decisions.set(d.id,d.keep);else if(!previousRejects.has(d.id)||d.keep)throw Error('Invalid decision')}
   if(decisions.size!==items.length)throw Error('Missing decision');
   if(data.schema){const expected=items.filter(x=>decisions.get(x.id)).map(x=>x.id);if(!Array.isArray(data.items)||data.items.length!==expected.length||data.items.some((x,i)=>x.id!==expected[i]))throw Error('Mismatched result items')}
-  const kept=items.filter(x=>decisions.get(x.id));return {items:kept,workflow:{status:'applied',filtered:items.length-kept.length}};
- }catch{return {items,workflow:{status:'fallback',filtered:0},warning:'AI 筛选暂不可用，已使用默认规则'}}
+  const kept=items.filter(x=>decisions.get(x.id));return {items:kept,decisions:data.decisions,workflow:{status:'applied',filtered:items.length-kept.length}};
+ }catch{if(failureMode==='closed')return {items:[],workflow:{status:'error',filtered:0},warning:'AI 筛选暂不可用，未使用默认规则，请重试'};return {items,workflow:{status:'fallback',filtered:0},warning:'AI 筛选暂不可用，已使用默认规则'}}
 }
