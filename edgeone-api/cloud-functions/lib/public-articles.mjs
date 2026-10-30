@@ -1,3 +1,4 @@
+import {estimateReading} from './content-metrics.js';
 import {publicFetch} from './public-fetch.mjs';
 import {load} from 'cheerio';
 import {text,inferTopic,relevant} from './knowledge.js';
@@ -54,15 +55,17 @@ function wallDetected($){
 }
 export function parsePublicArticle(html,address,site){
  const $=load(html);if(wallDetected($))throw Error('跳过内容墙页面');
+ const dateHint=$('meta[property="article:published_time"]').attr('content')||$('[itemprop="datePublished"]').attr('content')||'';const declaredLanguage=$('html').attr('lang')||'';let publishedAt=dateHint;for(const el of $('script[type="application/ld+json"]').toArray()){try{const visit=node=>{if(!node||typeof node!=='object')return;if(!publishedAt&&typeof node.datePublished==='string')publishedAt=node.datePublished;for(const v of Object.values(node))if(v&&typeof v==='object')Array.isArray(v)?v.forEach(visit):visit(v)};visit(JSON.parse($(el).text()))}catch{}}
+ if(!publishedAt){const time=$('time[datetime]:not([itemprop="dateModified"])').first();if(!/updated|modified|更新/i.test(time.parent().text()))publishedAt=time.attr('datetime')||''}
  const title=text($('h1').first().text()||$('meta[property="og:title"]').attr('content'));if(!title)throw Error('缺少文章标题');
  $('script,style,noscript,nav,header,footer,aside,form,button,[hidden],[aria-hidden="true"],[style*="display:none"],[style*="display: none"],.related,.related-posts,.newsletter,.advertisement').remove();
  const choices=['[itemprop="articleBody"]','.article__body','.article-body','.article-content','.entry-content','.post-content','.sqs-html-content','.article-body-commercial-selector','article','main'];let paragraphs=[];
  for(const selector of choices){const root=$(selector).first();if(!root.length)continue;const candidate=root.find('p,h2,h3,blockquote').toArray().map(el=>text($(el).text())).filter(p=>p.length>20);if(candidate.join('\n').length>=800&&candidate.length>=5){paragraphs=candidate;break}}
  if(!paragraphs.length)throw Error('未取得可公开阅读的实质正文');
- const contentText=[...new Set(paragraphs)].join('\n\n').slice(0,24000),desc=contentText.slice(0,1800);
+ const fullText=[...new Set(paragraphs)].join('\n\n'),contentText=fullText.slice(0,24000),desc=contentText.slice(0,1800),reading=estimateReading(fullText);
  const canonical=$('link[rel="canonical"]').attr('href');let url=address;try{const u=new URL(canonical||address,address);if(u.protocol==='https:'&&u.hostname===new URL(site.url).hostname){u.search='';u.hash='';url=u.href}}catch{}
  const image=$('meta[property="og:image"]').attr('content')||'',author=text($('meta[name="author"]').attr('content')||$('[rel="author"]').first().text())||site.name;
- return {id:site.id+':'+url,kind:'article',provider:site.id,source:site.name,title,desc,description:desc,contentText,contentAccess:'public-html',url,cover:image.startsWith('https://')?image:'',author,publishedAt:$('meta[property="article:published_time"]').attr('content')||'',tags:'',topic:inferTopic(title+' '+desc),curated:true};
+ return {id:site.id+':'+url,kind:'article',provider:site.id,source:site.name,title,desc,description:desc,contentText,reading,declaredLanguage,contentAccess:'public-html',url,cover:image.startsWith('https://')?image:'',author,publishedAt,tags:'',topic:inferTopic(title+' '+desc),curated:true};
 }
 async function listings(fetcher){
  if(listingCache&&listingCache.until>Date.now())return listingCache;
