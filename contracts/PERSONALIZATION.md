@@ -113,3 +113,11 @@ workflow第二轮只发送判定所需字段，去除封面、重复description/
 ## 作者核验回退（覆盖先前强制认证要求）
 
 作者硬门槛回退为粉丝严格超过10000，不再强制官方认证；未知粉丝仍不放行。优先使用公开用户资料备用查询，失败再查B站card，核对返回UID和粉丝数字。已实际获取的八个指定账号资料可作为一小时内的资料缓存，旧已认证证据仅作为有效期内失败兜底。认证字段保留作参考，不再因此删除候选；内容排除规则保持。新版Dify提示同步更新，需重新发布私有workflow才能生效。
+
+## 扩展媒体来源（2026-10-30）
+
+图文配置新增/重新接入Quanta Magazine、The American Scholar、The Dial（thedial.world）、The Guardian（science目录起步）、Longreads、Noema Magazine、Aeon、ProMarket、Works in Progress（用户确认worksinprogress.co）。统一直接读取公开HTML并沿用robots、内容墙和正文完整性检查，不使用它们的付费API或绕墙。来源级失败独立记录，不影响其他来源；发现模式尽量保留一个Quanta候选，避免新站失败占满首批。
+
+YouTube先接用户已指定的3Blue1Brown官方频道UCYO_jab_esuFRV4b17AJtAw：从公开频道页面核对频道ID与订阅数，要求超过1万；读取公开Atom视频更新，不是全站搜索，不声称已收齐历史库。条目参与同一默认/AI筛选，站内以youtube-nocookie播放器播放，Shorts使用竖版观看框，其余未知尺寸默认横版。缺失时长显示视频，不伪造0秒。主动看过仍按youtube:id屏蔽7天。
+
+视频模式source=videos同时请求B站与YouTube；all模式最多32个候选，避免超过Dify输入上限。未调用真实模型。

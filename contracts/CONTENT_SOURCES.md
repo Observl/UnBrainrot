@@ -26,3 +26,18 @@
 `node scripts/import-reserve.mjs --file=metadata.json --mid=账号UID --name=作者 --series=已批准科普系列名`：导入yt-dlp的JSON元数据，保留源视频链接；系列只作为单集身份例外，不覆盖政治、广告、教学或伪科学排除。导入不等于完整性通过。
 
 当前后备池持久保存在仓库，在线请求按种子抽6个候选，补齐简介并核对实际视频作者，再交给当前筛选方式。没有部署定时采集任务，没有实时YouTube Key，不声称已接入所有调研项目。图文依旧走公开HTML，不改回网站RSS/API。
+
+## 新增媒体映射
+
+- https://www.quantamagazine.org/
+- https://theamericanscholar.org/
+- https://www.thedial.world/
+- https://www.theguardian.com/science
+- https://longreads.com/
+- https://www.noemamag.com/
+- https://aeon.co/
+- https://www.promarket.org/
+- https://worksinprogress.co/（用户已确认）
+- YouTube：3Blue1Brown原作者频道，公开频道资料和Atom更新。
+
+添加适配不等于所有文章始终可读取。The American Scholar等站存在订阅内容，仅展示通过公开正文与内容墙检查的页面；访问失败/禁止采集的来源跳过。YouTube嵌入可能受地区或视频自身限制，保留原视频链接。
